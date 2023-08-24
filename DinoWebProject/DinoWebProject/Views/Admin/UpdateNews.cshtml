@@ -1,0 +1,38 @@
+﻿@model DinoWebProject.Models.News
+@{
+    ViewBag.Title = "UpdateNews";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>İçerik Güncelle</h2>
+
+
+@using (Html.BeginForm("UpdateNews", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<div class="form-group">
+    @Html.Label("Sıra Numarası")
+    @Html.TextBoxFor(x => x.OrderNumber, new { @class = "form-control" })
+    <br /><br />
+    @Html.Label("Haber Adı")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    <br /> <br />
+    @Html.Label("Haber Açıklaması")
+    @Html.TextAreaFor(x => x.Text, new { @class = "form-control" })
+
+    <br /> <br />
+    @Html.Label("Haber Görseli")
+    <input type="file" src="~/Images/News/x => x.Img" name="Img" class="form-control-file" />
+    @Html.ValidationMessageFor(x => x.Img)
+    <small class="text-muted" style="color:red !important">Lütfen görselin boyutunu 800x500 piksel olarak ayarlayın.</small>
+    <br />
+
+
+    <br /> <br />
+    <button class="btn btn-success">Güncelle</button>
+
+</div>
+}
+
+

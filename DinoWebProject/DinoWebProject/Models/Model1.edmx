@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DbDinoWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Contents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderNumber" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="FullText" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Img" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderNumber" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Text" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderNumber" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShorText" Type="nvarchar" MaxLength="200" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FullText" Type="nvarchar" MaxLength="1000" />
+          <Property Name="DetailImg" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sector">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderNumber" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullText" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ShortText" Type="nvarchar" MaxLength="500" />
+          <Property Name="DetailTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="DetailImg" Type="nvarchar" MaxLength="50" />
+          <Property Name="Img" Type="nvarchar" MaxLength="50" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Support">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderNumber" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="Text" Type="nvarchar" MaxLength="500" />
+          <Property Name="PageOrderNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DbDinoWebModelStoreContainer">
+          <EntitySet Name="Contents" EntityType="Self.Contents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sector" EntityType="Self.Sector" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Support" EntityType="Self.Support" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DbDinoWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="OrderNumber" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Text" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Sector">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderNumber" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullText" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ShortText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DetailTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DetailImg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="OrderNumber" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ShorText" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FullText" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="DetailImg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DbDinoWebEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="News" EntityType="Self.News" />
+          <EntitySet Name="Sector" EntityType="Self.Sector" />
+          <EntitySet Name="Product" EntityType="Self.Product" />
+          <EntitySet Name="User" EntityType="DbDinoWebModel.User" />
+          <EntitySet Name="Contents" EntityType="DbDinoWebModel.Contents" />
+          <EntitySet Name="Support" EntityType="DbDinoWebModel.Support" />
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderNumber" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FullText" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Img" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Support">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderNumber" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Text" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PageOrderNumber" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DbDinoWebModelStoreContainer" CdmEntityContainer="DbDinoWebEntities">
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="DbDinoWebModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sector">
+            <EntityTypeMapping TypeName="DbDinoWebModel.Sector">
+              <MappingFragment StoreEntitySet="Sector">
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="FullText" ColumnName="FullText" />
+                <ScalarProperty Name="ShortText" ColumnName="ShortText" />
+                <ScalarProperty Name="DetailTitle" ColumnName="DetailTitle" />
+                <ScalarProperty Name="DetailImg" ColumnName="DetailImg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="DbDinoWebModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="DetailImg" ColumnName="DetailImg" />
+                <ScalarProperty Name="FullText" ColumnName="FullText" />
+                <ScalarProperty Name="ShorText" ColumnName="ShorText" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="DbDinoWebModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contents">
+            <EntityTypeMapping TypeName="DbDinoWebModel.Contents">
+              <MappingFragment StoreEntitySet="Contents">
+                <ScalarProperty Name="Img" ColumnName="Img" />
+                <ScalarProperty Name="FullText" ColumnName="FullText" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Support">
+            <EntityTypeMapping TypeName="DbDinoWebModel.Support">
+              <MappingFragment StoreEntitySet="Support">
+                <ScalarProperty Name="PageOrderNumber" ColumnName="PageOrderNumber" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

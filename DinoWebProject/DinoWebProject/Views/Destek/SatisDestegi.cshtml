@@ -1,0 +1,54 @@
+﻿@model DinoWebProject.Models.HomeViewModel.Class
+<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
+                <h1 class="title">Satış Desteği</h1>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="bread-tag">
+                    <a href="/Anasayfa/Index">Ana Sayfa</a>
+                    <span> / </span>
+                    <a href="#" class="active"> Satış Desteği</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rts-accordion-area service rts-section-gap inner">
+    <div class="accordion-service-bg bg_image inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="accordion-service-inner inner">
+                        <div class="title-area-start">
+                            <span class="sub color-primary">Satış Desteği</span>
+                            <h2 class="title">Satış Desteği</h2>
+                        </div>
+                        @foreach (var item in Model.Supports.Where(x => x.OrderNumber >= 14 && x.OrderNumber <= 36))
+                        {
+                            <div class="accordion-area">
+                                <div class="accordion" id="accordionExample3">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFive">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive_@item.Id" aria-expanded="false" aria-controls="collapseFive_@item.Id">
+                                                @item.Title
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive_@item.Id" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample3">
+                                            <div class="accordion-body">
+                                                @item.Text
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

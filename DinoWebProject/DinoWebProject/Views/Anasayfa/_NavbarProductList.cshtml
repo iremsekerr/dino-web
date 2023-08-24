@@ -1,0 +1,21 @@
+﻿@model DinoWebProject.Models.HomeViewModel.ProductModel
+<li class="has-droupdown">
+    <a class="nav-link" href="/Urun/Urunler">Ürünler</a>
+    <ul class="submenu menu-link">
+        <li class="menu-item">
+            <a class="tag" href="#">Ürünler</a>
+            @foreach (var item in Model.Products)
+            {<ul>
+                    <li><a href="/Urun/UrunDetay/@item.Id">@item.Title</a></li>
+
+
+                </ul>
+
+            }
+
+
+        </li>
+
+    </ul>
+</li>
+

@@ -1,0 +1,392 @@
+﻿
+<div class="rts-contact-form-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="rts-contact-fluid rts-section-gap">
+                    <div class="rts-title-area contact-fluid text-center mb--50">
+                        <p class="pre-title">
+
+                        </p>
+                        <h2 class="title">İş Ortağımız Olun</h2>
+                    </div>
+                    <div class="form-wrapper">
+                        <div id="form-messages"></div>
+                        <form id="contact-form" action="" method="post">
+                            <!-- Firma Bilgileri -->
+                            <div class="form-section">
+                                <h5>Firma Bilgileri</h5>
+
+                                <input type="text" name="company_name" id="company_name" placeholder="*Firma Ünvanı" required onblur="checkCompanyName()" class="">
+                                
+                                <br>
+                                <span id="error_message_company_name" style="color: red;"></span>
+                                <select style=" background: #F6F6F6; height: 55px; border-radius: 15px; margin-bottom: 25px; border: 1px solid transparent;" name="company_city" required onblur="chechCompanyCity()">
+                                    <option value="" disabled selected>*Firmanın Bulunduğu İl</option>
+                                    <option value="Adana">Adana</option>
+                                    <option value="Adıyaman">Adıyaman</option>
+                                    <option value="Afyonkarahisar">Afyonkarahisar</option>
+                                    <option value="Ağrı">Ağrı</option>
+                                    <option value="Aksaray">Aksaray</option>
+                                    <option value="Amasya">Amasya</option>
+                                    <option value="Ankara">Ankara</option>
+                                    <option value="Antalya">Antalya</option>
+                                    <option value="Ardahan">Ardahan</option>
+                                    <option value="Artvin">Artvin</option>
+                                    <option value="Aydın">Aydın</option>
+                                    <option value="Balıkesir">Balıkesir</option>
+                                    <option value="Bartın">Bartın</option>
+                                    <option value="Batman">Batman</option>
+                                    <option value="Bayburt">Bayburt</option>
+                                    <option value="Bilecik">Bilecik</option>
+                                    <option value="Bingöl">Bingöl</option>
+                                    <option value="Bitlis">Bitlis</option>
+                                    <option value="Bolu">Bolu</option>
+                                    <option value="Burdur">Burdur</option>
+                                    <option value="Bursa">Bursa</option>
+                                    <option value="Çanakkale">Çanakkale</option>
+                                    <option value="Çankırı">Çankırı</option>
+                                    <option value="Çorum">Çorum</option>
+                                    <option value="Denizli">Denizli</option>
+                                    <option value="Diyarbakır">Diyarbakır</option>
+                                    <option value="Düzce">Düzce</option>
+                                    <option value="Edirne">Edirne</option>
+                                    <option value="Elazığ">Elazığ</option>
+                                    <option value="Erzincan">Erzincan</option>
+                                    <option value="Erzurum">Erzurum</option>
+                                    <option value="Eskişehir">Eskişehir</option>
+                                    <option value="Gaziantep">Gaziantep</option>
+                                    <option value="Giresun">Giresun</option>
+                                    <option value="Gümüşhane">Gümüşhane</option>
+                                    <option value="Hakkari">Hakkari</option>
+                                    <option value="Hatay">Hatay</option>
+                                    <option value="Iğdır">Iğdır</option>
+                                    <option value="Isparta">Isparta</option>
+                                    <option value="İstanbul">İstanbul</option>
+                                    <option value="İzmir">İzmir</option>
+                                    <option value="Kahramanmaraş">Kahramanmaraş</option>
+                                    <option value="Karabük">Karabük</option>
+                                    <option value="Karaman">Karaman</option>
+                                    <option value="Kars">Kars</option>
+                                    <option value="Kastamonu">Kastamonu</option>
+                                    <option value="Kayseri">Kayseri</option>
+                                    <option value="Kırıkkale">Kırıkkale</option>
+                                    <option value="Kırklareli">Kırklareli</option>
+                                    <option value="Kırşehir">Kırşehir</option>
+                                    <option value="Kilis">Kilis</option>
+                                    <option value="Kocaeli">Kocaeli</option>
+                                    <option value="Konya">Konya</option>
+                                    <option value="Kütahya">Kütahya</option>
+                                    <option value="Malatya">Malatya</option>
+                                    <option value="Manisa">Manisa</option>
+                                    <option value="Mardin">Mardin</option>
+                                    <option value="Mersin">Mersin</option>
+                                    <option value="Muğla">Muğla</option>
+                                    <option value="Muş">Muş</option>
+                                    <option value="Nevşehir">Nevşehir</option>
+                                    <option value="Niğde">Niğde</option>
+                                    <option value="Ordu">Ordu</option>
+                                    <option value="Osmaniye">Osmaniye</option>
+                                    <option value="Rize">Rize</option>
+                                    <option value="Sakarya">Sakarya</option>
+                                    <option value="Samsun">Samsun</option>
+                                    <option value="Siirt">Siirt</option>
+                                    <option value="Sinop">Sinop</option>
+                                    <option value="Sivas">Sivas</option>
+                                    <option value="Şanlıurfa">Şanlıurfa</option>
+                                    <option value="Şırnak">Şırnak</option>
+                                    <option value="Tekirdağ">Tekirdağ</option>
+                                    <option value="Tokat">Tokat</option>
+                                    <option value="Trabzon">Trabzon</option>
+                                    <option value="Tunceli">Tunceli</option>
+                                    <option value="Uşak">Uşak</option>
+                                    <option value="Van">Van</option>
+                                    <option value="Yalova">Yalova</option>
+                                    <option value="Yozgat">Yozgat</option>
+                                    <option value="Zonguldak">Zonguldak</option>
+
+                                    <!-- Diğer firma seçenekleri burada listelenebilir -->
+                                </select>
+                                <br>
+
+                                <input type="text" name="tax" placeholder="*Vergi Dairesi" required onblur="checkTax()">
+                                <br>
+                                <span id="error_message_tax" style="color: red;"></span>
+
+                                <input type="text" name="tax_number" placeholder="*Vergi Numarası" required onblur="checkTaxNumber()">
+                                <br>
+                                <span id="error_message_tax_number" style="color: red;"></span>
+                                <!-- Diğer firma bilgileri alanları eklenebilir -->
+                            </div>
+                            <!-- Firma İletişim Bilgileri -->
+                            <div class="form-section">
+                                <h5>Firma İletişim Bilgileri</h5>
+
+                                <input type="email" name="e-mail" placeholder="E-Mail" required>
+                                <input type="tel" name="company_phone" placeholder="+90 (___) ___ __ __" required>
+                                <input type="url" name="web-site" placeholder="*Web-Sitesi" required onblur="checkWebSite()">
+                                <span id="error_message_web_site" style="color: red;"></span>
+                                <!-- Diğer iletişim bilgileri alanları eklenebilir -->
+                            </div>
+                            <!-- Başvuran Kişi Bilgileri -->
+                            <div class="form-section">
+                                <h5>Başvuran Kişi Bilgileri</h5>
+                                <input type="text" name="applicant_name" placeholder="*Başvuran Kişi Adı Soyadı" required onblur="checkApplicantName()">
+                                <span id="error_message_applicant_name" style="color: red;"></span>
+                                <select style=" background: #F6F6F6; height: 55px; border-radius: 15px; margin-bottom: 25px; border: 1px solid transparent;" name="aplicant_title" required>
+                                    <option value="" disabled selected>*Başvuran Kişi Unvanı</option>
+                                    <option value="A - Grup Mail Adresi">A - Grup Mail Adresi</option>
+                                    <option value="Arge Müdürü">Arge Müdürü</option>
+                                    <option value="Arge Uzmanı">Arge Uzmanı</option>
+                                    <option value="Asistan">Asistan</option>
+                                    <option value="Avukat">Avukat</option>
+                                    <option value="Başkan Yardımcısı Finans ve İdare">Başkan Yardımcısı Finans ve İdare</option>
+                                    <option value="Bayi Md.">Bayi Md.</option>
+                                    <option value="Bilgi İşlem Direktörü">Bilgi İşlem Direktörü</option>
+                                    <option value="Bilgi İşlem Müdür Yardımcısı">Bilgi İşlem Müdür Yardımcısı</option>
+                                    <option value="Bilgi İşlem Müdürü">Bilgi İşlem Müdürü</option>
+                                    <option value="Bilgi İşlem Sorumlusu">Bilgi İşlem Sorumlusu</option>
+                                    <option value="Bilgi İşlem Uzmanı">Bilgi İşlem Uzmanı</option>
+                                    <option value="Bilgi İşlem Yöneticisi">Bilgi İşlem Yöneticisi</option>
+                                    <option value="Bilgi Sistemleri Müdürü">Bilgi Sistemleri Müdürü</option>
+                                    <option value="Bilgi Teknolojileri Müdürü">Bilgi Teknolojileri Müdürü</option>
+                                    <option value="Bilgi Teknolojileri Şefi">Bilgi Teknolojileri Şefi</option>
+                                    <option value="Bilgi Teknolojileri Uzmanı">Bilgi Teknolojileri Uzmanı</option>
+                                    <option value="Bilgisayar Mühendisi">Bilgisayar Mühendisi</option>
+                                    <option value="Bölge Müdür Yardımcısı">Bölge Müdür Yardımcısı</option>
+                                    <option value="Bölge Müdürü">Bölge Müdürü</option>
+                                    <option value="Bölge satış Yöneticisi">Bölge satış Yöneticisi</option>
+                                    <option value="Bölge Sorumlusu">Bölge Sorumlusu</option>
+                                    <option value="BTC Boru Hattı Türkiye Kesimi İşletmecisi">BTC Boru Hattı Türkiye Kesimi İşletmecisi</option>
+                                    <option value="Bütçe Müdürü">Bütçe Müdürü</option>
+                                    <option value="Bütçe Sorumlusu">Bütçe Sorumlusu</option>
+                                    <option value="Bütçe ve Mali İşler Genel Müdür Yardımcısı">Bütçe ve Mali İşler Genel Müdür Yardımcısı</option>
+                                    <option value="CEO">CEO</option>
+                                    <option value="CFO">CFO</option>
+                                    <option value="COO">COO</option>
+                                    <option value="CTO">CTO</option>
+                                    <option value="Danışman">Danışman</option>
+                                    <option value="Denetim Uzmanı">Denetim Uzmanı</option>
+                                    <option value="Depo Sorumlusu">Depo Sorumlusu</option>
+                                    <option value="Depo Yöneticisi">Depo Yöneticisi</option>
+                                    <option value="Destek Ekip Lideri">Destek Ekip Lideri</option>
+                                    <option value="Destek Müdürü">Destek Müdürü</option>
+                                    <option value="Destek Uzmanı">Destek Uzmanı</option>
+                                    <option value="Destek Yöneticisi">Destek Yöneticisi</option>
+                                    <option value="Dış Ticaret Müdürü">Dış Ticaret Müdürü</option>
+                                    <option value="Dış Ticaret Sorumlusu">Dış Ticaret Sorumlusu</option>
+                                    <option value="Direktör">Direktör</option>
+                                    <option value="Donanım Satış Sorumlusu">Donanım Satış Sorumlusu</option>
+                                    <option value="Eğitim Sorumlusu">Eğitim Sorumlusu</option>
+                                    <option value="Eğitim ve Destek Uzmanı">Eğitim ve Destek Uzmanı</option>
+                                    <option value="Elektrik Mühendisi">Elektrik Mühendisi</option>
+                                    <option value="Endüstri Mühendisi">Endüstri Mühendisi</option>
+                                    <option value="ERP Proje Yöneticisi">ERP Proje Yöneticisi</option>
+                                    <option value="Erp Sistemleri Yöneticisi">Erp Sistemleri Yöneticisi</option>
+                                    <option value="ERP Sorumlusu">ERP Sorumlusu</option>
+                                    <option value="E-Ticaret Uzmanı">E-Ticaret Uzmanı</option>
+                                    <option value="Eticaret Yöneticisi">Eticaret Yöneticisi</option>
+                                    <option value="Fabrika Müdürü">Fabrika Müdürü</option>
+                                    <option value="Finans Direktörü">Finans Direktörü</option>
+                                    <option value="Finans Koordinatörü">Finans Koordinatörü</option>
+                                    <option value="Finans Müdürü">Finans Müdürü</option>
+                                    <option value="Finans Sorumlusu">Finans Sorumlusu</option>
+                                    <option value="Finans Uzmanı">Finans Uzmanı</option>
+                                    <option value="Finans ve Mali İşler Direktörü">Finans ve Mali İşler Direktörü</option>
+                                    <option value="Finans ve Muhasebe Müdürü">Finans ve Muhasebe Müdürü</option>
+                                    <option value="Finans Yöneticisi">Finans Yöneticisi</option>
+                                    <option value="Finansal Geliştirme Müdürü">Finansal Geliştirme Müdürü</option>
+                                    <option value="Finansman Bölüm Çalışanı">Finansman Bölüm Çalışanı</option>
+                                    <option value="Firma Ortağı">Firma Ortağı</option>
+                                    <option value="Firma Sahibi">Firma Sahibi</option>
+                                    <option value="Firma Yetkilisi">Firma Yetkilisi</option>
+                                    <option value="Genel Koordinatör">Genel Koordinatör</option>
+                                    <option value="Genel Müdür">Genel Müdür</option>
+                                    <option value="Genel Müdür Yardımcısı">Genel Müdür Yardımcısı</option>
+                                    <option value="Gıda Mühendisi">Gıda Mühendisi</option>
+                                    <option value="Halka İlişkiler Uzmanı">Halka İlişkiler Uzmanı</option>
+                                    <option value="Halkla İlişkiler Müdürü">Halkla İlişkiler Müdürü</option>
+                                    <option value="Hazine Yöneticisi">Hazine Yöneticisi</option>
+                                    <option value="İcra Kurulu Başkan Yardımcısı - CFO">İcra Kurulu Başkan Yardımcısı - CFO</option>
+                                    <option value="İcra Kurulu Başkanı">İcra Kurulu Başkanı</option>
+                                    <option value="İcra Kurulu Üyesi">İcra Kurulu Üyesi</option>
+                                    <option value="İdari İşler Müdürü">İdari İşler Müdürü</option>
+                                    <option value="İdari İşler Sorumlusu">İdari İşler Sorumlusu</option>
+                                    <option value="İhracat Müdürü">İhracat Müdürü</option>
+                                    <option value="İhracat Sorumlusu">İhracat Sorumlusu</option>
+                                    <option value="İnsan Kaynakları Direktörü">İnsan Kaynakları Direktörü</option>
+                                    <option value="İnsan Kaynakları Müdürü">İnsan Kaynakları Müdürü</option>
+                                    <option value="İnsan Kaynakları Sorumlusu">İnsan Kaynakları Sorumlusu</option>
+                                    <option value="İnsan Kaynakları Şefi">İnsan Kaynakları Şefi</option>
+                                    <option value="İnsan Kaynakları Uzmanı">İnsan Kaynakları Uzmanı</option>
+                                    <option value="İnsan Kaynakları ve Kalite Yöneticisi">İnsan Kaynakları ve Kalite Yöneticisi</option>
+                                    <option value="İnsan Kaynakları Yöneticisi">İnsan Kaynakları Yöneticisi</option>
+                                    <option value="İnşaat Mühendisi">İnşaat Mühendisi</option>
+                                    <option value="İstasyon Müdürü">İstasyon Müdürü</option>
+                                    <option value="İş Geliştirme Müdürü">İş Geliştirme Müdürü</option>
+                                    <option value="İş Geliştirme Uzmanı">İş Geliştirme Uzmanı</option>
+                                    <option value="İş Güvenliği Uzmanı">İş Güvenliği Uzmanı</option>
+                                    <option value="İş Sürecleri Müdürü">İş Sürecleri Müdürü</option>
+                                    <option value="İş Yazılımları Sorumlusu">İş Yazılımları Sorumlusu</option>
+                                    <option value="İthalat Müdürü">İthalat Müdürü</option>
+                                    <option value="İthalat Sorumlusu">İthalat Sorumlusu</option>
+                                    <option value="İthalat Sorumlusu">İthalat Sorumlusu</option>
+                                    <option value="Kalite Müdürü">Kalite Müdürü</option>
+                                    <option value="Kalite Sorumlusu">Kalite Sorumlusu</option>
+                                    <option value="Kanal Satış Müdürü">Kanal Satış Müdürü</option>
+                                    <option value="Kanal ve İş Geliştirme Müdürü">Kanal ve İş Geliştirme Müdürü</option>
+                                    <option value="Kıdemli İş Analisti">Kıdemli İş Analisti</option>
+                                    <option value="Koordinatör">Koordinatör</option>
+                                    <option value="Kredi ve Risk Uzman Yardımcısı">Kredi ve Risk Uzman Yardımcısı</option>
+                                    <option value="Kullanıcı">Kullanıcı</option>
+                                    <option value="Kurumsal İletişim Uzmanı">Kurumsal İletişim Uzmanı</option>
+                                    <option value="Kurumsal iş Çözümleri Direktörü">Kurumsal iş Çözümleri Direktörü</option>
+                                    <option value="Kurumsal İş Çözümleri ve Satış Direktörü">Kurumsal İş Çözümleri ve Satış Direktörü</option>
+                                    <option value="Kurumsal İş Süreçleri Müdürü">Kurumsal İş Süreçleri Müdürü</option>
+                                    <option value="Kurumsal Satış Danışmanı">Kurumsal Satış Danışmanı</option>
+                                    <option value="Kurumsal Satış Müdürü">Kurumsal Satış Müdürü</option>
+                                    <option value="Kurumsal Uyarlama Uzmanı">Kurumsal Uyarlama Uzmanı</option>
+                                    <option value="Kurumsal Web Tasarım Sorumlusu">Kurumsal Web Tasarım Sorumlusu</option>
+                                    <option value="LogoVAP Sorumlusu">LogoVAP Sorumlusu</option>
+                                    <option value="Lojistik Koordinatörü">Lojistik Koordinatörü</option>
+                                    <option value="Lojistik Sorumlusu">Lojistik Sorumlusu</option>
+                                    <option value="Mağaza Müdürü">Mağaza Müdürü</option>
+                                    <option value="Makine Mühendisi">Makine Mühendisi</option>
+                                    <option value="Mali İşler Direktörü">Mali İşler Direktörü</option>
+                                    <option value="Mali İşler Grup Başkanı">Mali İşler Grup Başkanı</option>
+                                    <option value="Mali İşler Koordinatörü">Mali İşler Koordinatörü</option>
+                                    <option value="Mali İşler Müdürü">Mali İşler Müdürü</option>
+                                    <option value="Mali İşler Sorumlusu">Mali İşler Sorumlusu</option>
+                                    <option value="Mali İşler Şefi">Mali İşler Şefi</option>
+                                    <option value="Mali Müşavir">Mali Müşavir</option>
+                                    <option value="Mali ve İdari İşler Müdürü">Mali ve İdari İşler Müdürü</option>
+                                    <option value="Marka Yöneticisi">Marka Yöneticisi</option>
+                                    <option value="Muhasebe Müdür Yardımcısı">Muhasebe Müdür Yardımcısı</option>
+                                    <option value="Muhasebe Müdürü">Muhasebe Müdürü</option>
+                                    <option value="Muhasebe Sistem Uzmanı">Muhasebe Sistem Uzmanı</option>
+                                    <option value="Muhasebe Sorumlusu">Muhasebe Sorumlusu</option>
+                                    <option value="Muhasebe Şefi">Muhasebe Şefi</option>
+                                    <option value="Muhasebe Uzmanı">Muhasebe Uzmanı</option>
+                                    <option value="Muhasebe ve Finans Sorumlusu">Muhasebe ve Finans Sorumlusu</option>
+                                    <option value="Muhasebe ve İnsan Kaynakları Sorumlusu">Muhasebe ve İnsan Kaynakları Sorumlusu</option>
+                                    <option value="Müşteri Danışmanı">Müşteri Danışmanı</option>
+                                    <option value="Müşteri Hizmetleri Müdürü">Müşteri Hizmetleri Müdürü</option>
+                                    <option value="Müşteri Hizmetleri Uzmanı">Müşteri Hizmetleri Uzmanı</option>
+                                    <option value="Müşteri İlişkileri ve Kurumsal Satış Sorumlusu">Müşteri İlişkileri ve Kurumsal Satış Sorumlusu</option>
+                                    <option value="Müşteri İlişkileri ve Kurumsal Satış Yöneticisi">Müşteri İlişkileri ve Kurumsal Satış Yöneticisi</option>
+                                    <option value="Network ve Güvenlik Sorumlusu">Network ve Güvenlik Sorumlusu</option>
+                                    <option value="Operasyon Sorumlusu">Operasyon Sorumlusu</option>
+                                    <option value="Operasyonel Test Süreçleri Müdürü">Operasyonel Test Süreçleri Müdürü</option>
+                                    <option value="Öğretim Görevlisi">Öğretim Görevlisi</option>
+                                    <option value="Ön Muhasebe Sorumlusu">Ön Muhasebe Sorumlusu</option>
+                                    <option value="Pazarlama Koordinatörü">Pazarlama Koordinatörü</option>
+                                    <option value="Pazarlama Müdürü">Pazarlama Müdürü</option>
+                                    <option value="Pazarlama Uzmanı">Pazarlama Uzmanı</option>
+                                    <option value="Personel Müdürü">Personel Müdürü</option>
+                                    <option value="Personel Uzmanı">Personel Uzmanı</option>
+                                    <option value="Planlama Müdürü">Planlama Müdürü</option>
+                                    <option value="Planlama Sorumlusu">Planlama Sorumlusu</option>
+                                    <option value="Planlama ve Bilgi İşlem Müdürü">Planlama ve Bilgi İşlem Müdürü</option>
+                                    <option value="Proje Destek Uzmanı">Proje Destek Uzmanı</option>
+                                    <option value="Proje Direktörü">Proje Direktörü</option>
+                                    <option value="Proje Ekip Lideri">Proje Ekip Lideri</option>
+                                    <option value="Proje Koordinatörü">Proje Koordinatörü</option>
+                                    <option value="Proje Müdürü">Proje Müdürü</option>
+                                    <option value="Proje Uzmanı">Proje Uzmanı</option>
+                                    <option value="Proje ve Destek Hizmetleri Koordinatörü">Proje ve Destek Hizmetleri Koordinatörü</option>
+                                    <option value="Proje ve Destek Müdürü">Proje ve Destek Müdürü</option>
+                                    <option value="Proje ve Satış Yöneticisi">Proje ve Satış Yöneticisi</option>
+                                    <option value="Proje Yöneticisi">Proje Yöneticisi</option>
+                                    <option value="Raporlama Uzmanı">Raporlama Uzmanı</option>
+                                    <option value="Reklam Müdürü">Reklam Müdürü</option>
+                                    <option value="Reklam Uzmanı">Reklam Uzmanı</option>
+                                    <option value="Satın Alma Sorumlusu">Satın Alma Sorumlusu</option>
+                                    <option value="Satın Alma ve Lojistik Yöneticisi">Satın Alma ve Lojistik Yöneticisi</option>
+                                    <option value="Satınalma Müdürü">Satınalma Müdürü</option>
+                                    <option value="Satış Direktörü">Satış Direktörü</option>
+                                    <option value="Satış Müdür Yardımcısı">Satış Müdür Yardımcısı</option>
+                                    <option value="Satış Müdürü">Satış Müdürü</option>
+                                    <option value="Satış sorumlusu ve asistanı">Satış sorumlusu ve asistanı</option>
+                                    <option value="Satış Uzmanı">Satış Uzmanı</option>
+                                    <option value="Satış ve Destek Direktörü">Satış ve Destek Direktörü</option>
+                                    <option value="Satış ve Destek Müdürü">Satış ve Destek Müdürü</option>
+                                    <option value="Satış ve Destek Uzmanı">Satış ve Destek Uzmanı</option>
+                                    <option value="Satış ve Destek Yöneticisi">Satış ve Destek Yöneticisi</option>
+                                    <option value="Satış ve Muhasebe Yardımcısı">Satış ve Muhasebe Yardımcısı</option>
+                                    <option value="Satış ve Pazarlama Müdürü">Satış ve Pazarlama Müdürü</option>
+                                    <option value="Satış ve Pazarlama Sorumlusu">Satış ve Pazarlama Sorumlusu</option>
+                                    <option value="Satış ve Uygulama Danışmanı">Satış ve Uygulama Danışmanı</option>
+                                    <option value="Satış Yöneticisi">Satış Yöneticisi</option>
+                                    <option value="Sevkiyat Sorumlusu">Sevkiyat Sorumlusu</option>
+                                    <option value="Sipariş Sorumlusu">Sipariş Sorumlusu</option>
+                                    <option value="Sistem uzmanı">Sistem uzmanı</option>
+                                    <option value="Sistem Yöneticisi">Sistem Yöneticisi</option>
+                                    <option value="Stratejik Müşteri Yönetimi Müdürü">Stratejik Müşteri Yönetimi Müdürü</option>
+                                    <option value="Sunucu ve Veri Güvenliği Yönetimi Sorumlusu">Sunucu ve Veri Güvenliği Yönetimi Sorumlusu</option>
+                                    <option value="Supervisor">Supervisor</option>
+                                    <option value="Şirket Müdürü">Şirket Müdürü</option>
+                                    <option value="Şube Müdürü">Şube Müdürü</option>
+                                    <option value="Takım Lideri">Takım Lideri</option>
+                                    <option value="Tedarik Zinciri Müdürü">Tedarik Zinciri Müdürü</option>
+                                    <option value="Teknik Destek Uzmanı">Teknik Destek Uzmanı</option>
+                                    <option value="Teknik Müdür">Teknik Müdür</option>
+                                    <option value="Teknik Servis Müdürü">Teknik Servis Müdürü</option>
+                                    <option value="Teknik Servis Uzmanı">Teknik Servis Uzmanı</option>
+                                    <option value="Teknik Yazılım Müdürü">Teknik Yazılım Müdürü</option>
+                                    <option value="Türkiye Sorumlusu">Türkiye Sorumlusu</option>
+                                    <option value="Uygulama Danışmanı">Uygulama Danışmanı</option>
+                                    <option value="Uygulama Uzmanı">Uygulama Uzmanı</option>
+                                    <option value="Uygulama ve Yazılım Geliştirme Sorumlusu">Uygulama ve Yazılım Geliştirme Sorumlusu</option>
+                                    <option value="Üretim Destek Bölüm Müdürü">Üretim Destek Bölüm Müdürü</option>
+                                    <option value="Üretim Müdürü">Üretim Müdürü</option>
+                                    <option value="Üretim Mühendisi">Üretim Mühendisi</option>
+                                    <option value="Üretim Sorumlusu">Üretim Sorumlusu</option>
+                                    <option value="Üretim ve Planlama Müdürü">Üretim ve Planlama Müdürü</option>
+                                    <option value="Ürün Danışmanı">Ürün Danışmanı</option>
+                                    <option value="Ürün Destek Uzmanı">Ürün Destek Uzmanı</option>
+                                    <option value="Ürün Geliştirme Müdürü">Ürün Geliştirme Müdürü</option>
+                                    <option value="Ürün Uzmanı">Ürün Uzmanı</option>
+                                    <option value="Veri Girişi Uzmanı">Veri Girişi Uzmanı</option>
+                                    <option value="Yazı İşleri Müdürü">Yazı İşleri Müdürü</option>
+                                    <option value="Yazı İşleri Uzmanı">Yazı İşleri Uzmanı</option>
+                                    <option value="Yazılım Destek Müdürü">Yazılım Destek Müdürü</option>
+                                    <option value="Yazılım Destek Uzmanı">Yazılım Destek Uzmanı</option>
+                                    <option value="Yazılım Geliştirme Müdürü">Yazılım Geliştirme Müdürü</option>
+                                    <option value="Yazılım Geliştirme Uzmanı">Yazılım Geliştirme Uzmanı</option>
+                                    <option value="Yazılım Geliştirme Uzmanı">Yazılım Geliştirme Uzmanı</option>
+                                    <option value="Yazılım Koordinatörü">Yazılım Koordinatörü</option>
+                                    <option value="Yazılım Müdürü">Yazılım Müdürü</option>
+                                    <option value="Yazılım Satış Sorumlusu">Yazılım Satış Sorumlusu</option>
+                                    <option value="Yazılım Satış Yöneticisi">Yazılım Satış Yöneticisi</option>
+                                    <option value="Yazılım Şefi">Yazılım Şefi</option>
+                                    <option value="Yazılım Uzmanı">Yazılım Uzmanı</option>
+                                    <option value="Yazılım ve İş Geliştirme Uzmanı">Yazılım ve İş Geliştirme Uzmanı</option>
+                                    <option value="Yazılım ve Teknik Danışman">Yazılım ve Teknik Danışman</option>
+                                    <option value="Yenilemeli Ürünler Satış Müdürü">Yenilemeli Ürünler Satış Müdürü</option>
+                                    <option value="Yönetici">Yönetici</option>
+                                    <option value="Yönetici Asistanı">Yönetici Asistanı</option>
+                                    <option value="Yönetim Bilişim Uzmanı">Yönetim Bilişim Uzmanı</option>
+                                    <option value="Yönetim Danışmanı">Yönetim Danışmanı</option>
+                                    <option value="Yönetim Kurulu Başkan Yardımcısı">Yönetim Kurulu Başkan Yardımcısı</option>
+                                    <option value="Yönetim Kurulu Başkanı">Yönetim Kurulu Başkanı</option>
+                                    <option value="Yönetim Kurulu Üyesi">Yönetim Kurulu Üyesi</option>
+                                    <option value="Yurt İçi Bayilikler Müdürü">Yurt İçi Bayilikler Müdürü</option>
+                                    <!-- Diğer firma seçenekleri burada listelenebilir -->
+                                </select>
+
+                            </div>
+
+                            <!-- Mesaj -->
+                            <div class="form-section">
+                                <h5>Mesaj (Opsiyonel)</h5>
+
+                                <textarea placeholder="Mesaj" name="message"></textarea>
+                            </div>
+                            <button type="submit" class="rts-btn btn-primary">Başvur</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

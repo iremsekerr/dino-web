@@ -1,0 +1,70 @@
+﻿@model DinoWebProject.Models.HomeViewModel.Class
+@{
+    ViewBag.Title = "GetSectorList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <!-- DATA TABLE -->
+        <h3 class="title-5 m-b-35"> <strong>SEKTÖRLER</strong></h3>
+    </div>
+
+    <div class="table-responsive table-responsive-data2">
+        <table class="table table-data2">
+            <thead>
+                <tr>
+
+                    <th><strong>Sektör Id</strong></th>
+                    <th><strong>Sıra Numarası</strong></th>
+                    <th><strong>Sektör Adı</strong></th>
+                    <th><strong>Sektör Kısa Açıklaması</strong></th>
+                    <th><strong>Sektör Görseli </strong></th>
+                    <th><strong>Sektör Tam Açıklaması </strong></th>
+                    <th><strong>Sektör Detay Başlığı </strong></th>
+                    <th><strong>Sektör Detay Görseli </strong></th>
+                    <th><strong>Sektör İkonu </strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in Model.Sectors)
+                {
+                    <tr class="tr-shadow">
+                        <td>@x.Id</td>
+                        <td>@x.OrderNumber</td>
+                        <td>@x.Title</td>
+                        <td>@x.ShortText</td>
+                        <td><img src="~/Images/Sector/@x.Img" width="100px" height="90px" /></td>
+                        <td>@x.FullText</td>
+                        <td>@x.DetailTitle</td>
+
+                        <td><img src="~/Images/Sector/Detail/@x.DetailImg" width="100px" height="90px" /></td>
+                        <td><img src="~/Images/Icon/@x.Icon" width="100px" height="90px" /></td>
+                        <td>
+                            <div class="table-data-feature">
+                                <a href="/Admin/RemoveProduct/@x.Id">
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="zmdi zmdi-delete"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-data-feature">
+                                <a href="/Admin/UpdateSector/@x.Id">
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="zmdi zmdi-edit"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <!-- END DATA TABLE -->
+</div>
+

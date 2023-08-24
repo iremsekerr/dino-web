@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "AddNews";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <strong> HABER EKLE</strong>
+            </div>
+            <div class="card-body card-block">
+                <form asp-controller="Admin" asp-action="AddNews" method="post" enctype="multipart/form-data" class="form-horizontal">
+                    <label><strong>Sıra Numarası</strong></label>
+                    <input type="text" class="form-control" name="OrderNumber" />
+                    <br />
+
+                    <br />
+                    <label><strong>Haber Başlığı</strong></label>
+                    <input type="text" class="form-control" name="Title" /><br />
+                    <label><strong>Haber Açıklaması</strong></label>
+                    <input type="text" class="form-control" name="Text" /><br />
+                    <br />
+
+                    <br />
+                    <label><strong>Haber Görseli</strong></label><br />
+                    <small class="text-muted" style="color:red !important">Lütfen görselin boyutunu 800x500 piksel olarak ayarlayın.</small>
+                    <input type="file" name="Img" class="form-control" />
+
+                    <br />
+                    <button class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i>HABER EKLE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

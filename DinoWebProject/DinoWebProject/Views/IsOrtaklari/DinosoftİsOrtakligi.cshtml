@@ -1,0 +1,251 @@
+﻿@model DinoWebProject.Models.HomeViewModel.Class
+<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
+                <h1 class="title">Dinosoft İş Ortaklığı</h1>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="bread-tag">
+                    <a href="/Anasayfa/Index">Ana Sayfa</a>
+                    <span> / </span>
+                    <a href="#" class="active">Dinosoft İş Ortaklığı</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Blog Section Start -->
+<div class="rts-inner-blog ptb--70">
+    <div class="container custom">
+        <div class="row">
+            <div class="col-lg-12 pr-35 md-pr-15 md-mt-50">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="blog-details">
+                            <div class="blog-full">
+                                @foreach (var item in Model.Contents.Where(x => x.OrderNumber >= 8 && x.OrderNumber <= 9))
+                                {
+                                    <blockquote>
+                                        <h3>@item.Title</h3>
+                                        <p class="margin-0">
+                                            @item.FullText<br>
+
+                                        </p>
+                                    </blockquote>
+
+                                }
+                                <div class="service-detials-step-1">
+                                    <div class="row g-5 mt--30 mb--40">
+                                        <h3>İş Ortağı Olmanın Avantajları Nelerdir?</h3>
+                                        <div class="col-lg-6">
+
+                                            <!-- single service details card -->
+                                            <div class="service-details-card">
+
+                                                <div class="thumbnail">
+                                                    <img src="~/assets/images/service/icon/09.svg" alt="" class="icon">
+                                                </div>
+                                                <div class="details">
+                                                    <h6 class="title">İşinizi Büyütme</h6>
+                                                    <p class="disc">Dinosoft Bussines Solutions'ın güçlü pazarlama ve satış modelleriyle birlikte her alanda kazanç sağlayarak işlerinizi büyütün.</p>
+                                                </div>
+                                            </div>
+                                            <!-- single service details card End -->
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <!-- single service details card -->
+                                            <div class="service-details-card">
+                                                <div class="thumbnail">
+                                                    <img src="~/assets/images/service/icon/10.svg" alt="" class="icon">
+                                                </div>
+                                                <div class="details">
+                                                    <h6 class="title">Çözüm Geliştirme Odaklı Yaklaşım</h6>
+                                                    <p class="disc">Mevcut Dinosoft Yazılım ve ürünlerine ek olarak çözümler geliştirerek Dinosoft markası altında pazara sunma imkanı elde edin.</p>
+                                                </div>
+                                            </div>
+                                            <!-- single service details card End -->
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <!-- single service details card -->
+                                            <div class="service-details-card">
+                                                <div class="thumbnail">
+                                                    <img src="~/assets/images/service/icon/11.svg" alt="" class="icon">
+                                                </div>
+                                                <div class="details">
+                                                    <h6 class="title">Uzman Desteği</h6>
+                                                    <p class="disc">Hem teknik konularda hem de pazarlama stratejilerinde Dinosoft'un uzman personelinden yararlanın.</p>
+                                                </div>
+                                            </div>
+                                            <!-- single service details card End -->
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <!-- single service details card -->
+                                            <div class="service-details-card">
+                                                <div class="thumbnail">
+                                                    <img src="~/assets/images/service/icon/12.svg" alt="" class="icon">
+                                                </div>
+                                                <div class="details">
+                                                    <h6 class="title">Gelişmiş AR-GE</h6>
+                                                    <p class="disc">Dinosoft'un yurt içi ve yurt dışı yatırımlarıyla en gelişmiş teknolojilere erişim sağlayın.</p>
+                                                </div>
+                                            </div>
+                                            <!-- single service details card End -->
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <!-- single service details card -->
+                                            <div class="service-details-card">
+                                                <div class="thumbnail">
+                                                    <img src="~/assets/images/service/icon/10.svg" alt="" class="icon">
+                                                </div>
+                                                <div class="details">
+                                                    <h6 class="title">Kendinizi Uzmanlaştırma</h6>
+                                                    <p class="disc">Seçip kullandığınız Dinosoft ürün ve yazılımlarında kendinizi geliştirip uzmanlaşarak alanınızda söz sahibi olun.</p>
+                                                </div>
+                                            </div>
+                                            <!-- single service details card End -->
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <!-- single service details card -->
+                                            <div class="service-details-card">
+                                                <div class="thumbnail">
+                                                    <img src="~/assets/images/service/icon/11.svg" alt="" class="icon">
+                                                </div>
+                                                <div class="details">
+                                                    <h6 class="title">Portföyünüzü Genişletin</h6>
+                                                    <p class="disc">Her alanda ve sektörde kullanabileceğiniz çözümler sayesinde müşteri porföyünüzü genişletin.</p>
+                                                </div>
+                                            </div>
+                                            <!-- single service details card End -->
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="cta-one-bg col-12" style="padding-top:100px">
+                            <div class="cta-one-inner">
+                                <div class="cta-left">
+                                    <h3 class="title animated fadeIn">
+                                        Siz de aramıza katılın sektörünüzün en iyisi olun!
+                                    </h3>
+                                </div>
+                                <div class="cta-right">
+                                    <a class="rts-btn btn-white" href="#">Formu Doldur</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container" style="padding-top:100px;">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-5">
+                                    <div class="style_content__26jtu">
+                                        <h3>İş Ortaklığı Süreci Nasıl İşler?</h3>
+                                        <p>En büyük başarılar, ilk adımlarla şekillenir. Siz de bugün ilk adımınızı atarak Dinosoft Business Solutions ailesine katılarak başarınızda ilk adımı atın. Başvuru formunu doldurup, iş ortağı olmanın kapılarını aralayın ve heyecan verici sürecin başlangıcını yapın.</p>
+                                        <p>Hangi alanda iş ortağı olmayı seçerseniz seçin, Dinosoft Bussines Solutions ilkeleri doğrultusunda sizi de aramızda görmekten mutluluk duyacağız.</p>
+                                        <p>İlkelerimiz:</p>
+                                        <ul style="list-style: none; padding-left: 0;">
+                                           
+                                            <li>
+                                                <i class="far fa-check-circle"style="color:red !important"></i>
+                                                Dürüstlük ve Eşitlik
+                                            </li>
+                                            <li>
+                                                <i class="far fa-check-circle"style="color:red !important"></i>
+                                                Haksız Rekabetin önüne geçilmesi
+                                            </li>
+                                            <li>
+                                                <i class="far fa-check-circle"style="color:red !important"></i>
+                                                Her iki taraf için anlayış ve güven
+                                            </li>
+                                            <li>
+                                                <i class="far fa-check-circle"style="color:red !important"></i>
+                                                Stokçuluğu önlemek için her siparişte müşteri bilgilerinin eksiksiz girilmesi
+                                            </li>
+                                            <li>
+                                                <i class="far fa-check-circle"style="color:red !important"></i>
+                                                Ödeme vadelerinin kontrolü için tam dikkat
+                                            </li>
+                                            <li>
+                                                <i class="far fa-check-circle"style="color:red !important"></i>
+                                                Ürün eğitimlerine katılım ve sertifikasyon
+                                            </li>
+                                            <li>
+                                                <i class="far fa-check-circle"style="color:red !important"></i>
+                                                Müşterilerimizin satış hedeflerine en az çabayla ulaşmaları
+                                            </li>
+                                            <li>
+                                                <i class="far fa-check-circle" style="color:red !important"></i>
+                                                Müşterilerimizle etkili iletişim
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-7">
+                                    <div class="rts-accordion-area service rts-section-gap inner">
+                                        <div class="accordion-service-bg bg_image inner">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-xl-12">
+                                                        <div class="accordion-service-inner inner">
+                                                            <div class="title-area-start">
+                                                                
+                                                                <h4 class="title">Ortaklık Süreci Adımları</h4>
+                                                            </div>
+                                                            <div class="accordion-area">
+                                                                <div class="accordion" id="accordionExample3">
+                                                                    <div class="accordion-item">
+                                                                        <h2 class="accordion-header" id="headingFive">
+                                                                            <button class="accordion-button" >
+                                                                               Başvuru Formunun Doldurulması
+                                                                            </button>
+                                                                        </h2>
+                                                                        
+                                                                    </div>
+                                                                    <div class="accordion-item">
+                                                                        <h2 class="accordion-header" id="headingSix">
+                                                                            <button class="accordion-button collapsed"  >
+                                                                                Firmamızın yetkililerinin sizinle iletişime geçmesi
+                                                                            </button>
+                                                                        </h2>
+                                                                      
+                                                                    </div>
+                                                                    <div class="accordion-item">
+                                                                        <h2 class="accordion-header" id="headingSeven">
+                                                                            <button class="accordion-button collapsed" >
+                                                                                Anlaşma sağlandıktan sonra aday iş ortağı olarak aramıza katılımınızın sağlanması
+                                                                            </button>
+                                                                        </h2>
+                                                                       
+                                                                    </div>
+                                                                   
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Blog Section End -->
+    <!-- start header area -->
+    <!-- rts footer area start -->
+
+</div>

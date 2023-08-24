@@ -1,0 +1,582 @@
+﻿@model DinoWebProject.Models.HomeViewModel.Class
+<!-- ENd Header Area -->
+<!-- banner blank space area -->
+<div class="rts-banner-area rts-banner-one">
+    <div class="swiper mySwiper banner-one">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <!-- banner single content -->
+                <div class="banner-one-inner text-start">
+                    <p class="pre-title">
+                        <span>Hoşgeldiniz!</span> İşinizi Büyütmeye Hemen Başlayın
+                    </p>
+                    <h1 class="title ">
+                        Perakende de ihtiyacınız olan <span>Hız, Pratik Ve Kolay Kullanımla </span>
+                        Verimliliğinizi Arttırın
+                    </h1>
+
+                    <a href="#" class="rts-btn btn-primary color-h-black">Bize Ulaşın</a>
+                    <img class="shape-img one" src="~/assets/images/banner/shape/01.png" alt="banner_business">
+                </div>
+                <!-- banner single content end -->
+            </div>
+            <div class="swiper-slide two">
+                <!-- banner single content -->
+                <div class="banner-one-inner text-start">
+                    <p class="pre-title">
+                        <span>Hoşgeldiniz!</span> İşinizi Büyütmeye Hemen Başlayın
+                    </p>
+                    <h1 class="title ">Verilerinizi <span>Tek Noktadan</span>   Uçtan Uca Yönetin</h1>
+
+                    <a href="#" class="rts-btn btn-primary color-h-black">Bize Ulaşın</a>
+                    <img class="shape-img one" src="~/assets/images/banner/shape/01.png" alt="banner_business">
+                </div>
+                <!-- banner single content end -->
+            </div>
+            <div class="swiper-slide three">
+                <!-- banner single content -->
+                <div class="banner-one-inner text-start">
+                    <p class="pre-title">
+                        <span>Hoşgeldiniz!</span> İşinizi Büyütmeye Hemen Başlayın
+                    </p>
+                    <h1 class="title "> E-Ticaret İle Geleceğin <span>En Büyük</span> <br> Rekabetini Ortadan Kaldırın</h1>
+
+                    <a href="#" class="rts-btn btn-primary color-h-black">Bize Ulaşın</a>
+                    <img class="shape-img one" src="~/assets/images/banner/shape/01.png" alt="banner_business">
+                </div>
+                <!-- banner single content end -->
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="animation-img">
+        <img class="shape-img two" src="~/assets/images/banner/shape/02.png" alt="banner_business">
+        <img class="shape-img three" src="~/assets/images/banner/shape/03.png" alt="banner_business">
+    </div>
+</div>
+<!-- banner blank space area end -->
+<!-- rts about us section start -->
+<div class="rts-about-area rts-section-gap bg-about-sm-shape">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <!-- about left -->
+            @foreach (var item in Model.Contents)
+            {
+                if (item.OrderNumber == 1)
+                {
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 order-md-2 order-sm-2 order-2 mt_md--50 mt_sm--50">
+                        <div class="rts-title-area">
+                            <p class="pre-title">
+                                Hakkımızda
+                            </p>
+                            <h2 class="title">
+                                @item.Title
+                            </h2>
+                        </div>
+                        <div class="about-inner">
+                            <p class="disc">
+                                @item.FullText
+                            </p>
+                            <!-- start about success area -->
+                            <div class="row about-success-wrapper">
+                                <!-- left wrapper start -->
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="single">
+                                        <i class="far fa-check"></i>
+                                        <p class="details">7/24 Ulaşılabilir Bilgi Hattı</p>
+                                    </div>
+                                    <div class="single">
+                                        <i class="far fa-check"></i>
+                                        <p class="details">Hız,Pratiklik Ve Kolay Kullanımla Üst Düzey Verimlilik </p>
+                                    </div>
+                                    <div class="single">
+                                        <i class="far fa-check"></i>
+                                        <p class="details">Uzman Çalışma Arkadaşları</p>
+                                    </div>
+                                </div>
+                                <!-- left wrapper end -->
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="single">
+                                        <i class="far fa-check"></i>
+                                        <p class="details">
+                                            Proje Analizinden Başlayıp, Anahtar Teslimine Kadar Destek
+                                        </p>
+                                    </div>
+                                    <div class="single">
+                                        <i class="far fa-check"></i>
+                                        <p class="details">En İyi Çözüm Planı</p>
+                                    </div>
+                                    <div class="single">
+                                        <i class="far fa-check"></i>
+                                        <p class="details">Sektöre Uygun En İyi Ve Gelişmiş Ürünler</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- start about success area -->
+                            <!-- about founder & get in touch start -->
+                            <div class="row about-founder-wrapper align-items-center mt--40">
+                                <!-- left area start -->
+                                <!-- left area end -->
+                                <!-- right founder area -->
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12 mt_sm--20">
+                                    <div class="author-call-option">
+                                        <img class="authore-call" src="~/assets/images/about/call.svg" alt="call_founder">
+                                        <div class="call-details">
+                                            <span>Bize Ulaşın</span>
+                                            <a href="tel:+90 (850) 346 36 82">
+                                                <h6 class="title">+90 (850) 346 36 82</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- left founder area -->
+                            </div>
+                            <!-- about founder & get in touch end -->
+                        </div>
+                    </div>
+
+
+                }
+            }
+
+            <!-- about right -->
+            <!-- about-right Start-->
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-2 order-md-1 order-sm-1 order-1">
+                <div class="about-one-thumbnail">
+                    <img src="~/assets/images/about/main/about-01.png" alt="about-finbiz">
+                    <img class="small-img" src="~/assets/images/about/main/about-02.png" alt="finbiz-small">
+                    <div class="experience">
+                        <div class="left single">
+                            <h2 class="title">7+</h2>
+                            <p class="time">Yıl</p>
+                        </div>
+                        <div class="right single">
+                            <p class="disc">
+                                Alanında Uzman Ekip Arkadaşlarımızla Tecrübemiz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- about-right end -->
+        </div>
+    </div>
+</div>
+<!-- rts about us section end -->
+<!-- rts service post area  Start-->
+<div class="rts-service-area rts-section-gapBottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="rts-title-area service text-center">
+                    <p class="pre-title">
+                        Sektörler
+                    </p>
+                    <h2 class="title">Sektörler</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid service-main plr--120-service mt--50 plr_md--0 pl_sm--0 pr_sm--0">
+        <div class="background-service row">
+            <!-- start single Service -->
+            @foreach (var item in Model.Sectors)
+            {
+
+                <div class=" col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="service-one-inner one">
+                        <div class="thumbnail">
+                            <img src="~/Images/Icon/@item.Icon" alt="finbiz_service">
+                        </div>
+                        <div class="service-details">
+                            <a href="service-details.html">
+                                <h5 class="title">@item.Title</h5>
+                            </a>
+                            <p class="disc">
+                                @item.ShortText
+                            </p>
+                            <a class="rts-read-more btn-primary" href="/Sektor/SektorDetay/@item.Id">
+                                <i class="far fa-arrow-right"></i>Daha Fazlası
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+
+
+            <!-- end single Services -->
+            <!-- start single Service -->
+
+        </div>
+    </div>
+</div>
+<!-- rts service post area ENd -->
+<!-- business goal area -->
+<div class="rts-business-goal mt--0 rts-section-gapBottom">
+    <div class="container">
+        <div class="row">
+            <!-- business goal left -->
+            <div class="col-lg-6">
+                @foreach (var item in Model.Contents.Where(c => c.OrderNumber == 7))
+                {
+                    <div class="business-goal-one">
+                        <img src="~/assets/images/business-goal/01.jpg" alt="Business_Goal">
+                        <img class="small" src="~/Images/Content/@item.Img" alt="Business_Goal">
+                    </div>
+                }
+                </div>
+            <!-- business goal right -->
+            <!-- right area business -->
+
+            <div class="col-lg-6 mt--35 mt_md--70 mt_sm--70">
+
+                <div class="business-goal-right">
+                    <div class="rts-title-area business text-start pl--30">
+                        <p class="pre-title">
+                            Sizin İçin Buradayız
+                        </p>
+                        <h2 class="title">
+                            Dinosoft ERP
+                        </h2>
+                    </div>
+
+                    <div class="rts-business-goal pl--30">
+                        @foreach (var item in Model.Contents.Where(c => c.OrderNumber == 7))
+                        {
+                            <div class="single-goal">
+                                
+                                <div class="goal-wrapper">
+                                    <h6 class="title">@item.Title</h6>
+                                    <p class="disc">
+                                        @item.FullText
+                                    </p>
+                                </div>
+                            </div>
+                        }
+                        <div class="goal-button-wrapper mt--70">
+                            <a href="/Iletisim/Index" class="rts-btn btn-primary color-h-black">Bize Ulaşın</a>
+                           
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- right area business ENd -->
+        </div>
+    </div>
+</div>
+<!-- business goal area End -->
+<!-- rts-counter up area start -->
+<div class="rts-counter-up-area rts-section-gap counter-bg">
+    <div class="container">
+        <div class="row">
+            <!-- counter up area -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="single-counter">
+                    <img src="~/assets/images/counterup/icon/01.svg" alt="Business_counter">
+                    <div class="counter-details">
+                        <h2 class="title"><span class="counter animated fadeInDownBig">300</span></h2>
+                        <p class="disc">Başarılı Proje</p>
+                    </div>
+                </div>
+            </div>
+            <!-- counter up area -->
+            <!-- counter up area -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="single-counter pl--10 justify-content-center two pl--30">
+                    <img src="~/assets/images/counterup/icon/02.svg" alt="Business_counter">
+                    <div class="counter-details">
+                        <h2 class="title"><span class="counter animated fadeInDownBig">300</span></h2>
+                        <p class="disc">Müşteri</p>
+                    </div>
+                </div>
+            </div>
+            <!-- counter up area -->
+            <!-- counter up area -->
+            <!-- counter up area -->
+            <!-- counter up area -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="single-counter pl--10 justify-content-end four">
+                    <img src="~/assets/images/counterup/icon/04.svg" alt="Business_counter">
+                    <div class="counter-details">
+                        <h2 class="title "><span class="counter animated fadeInDownBig">300</span></h2>
+                        <p class="disc"> Müşteri Memnuniyeti</p>
+                    </div>
+                </div>
+            </div>
+            <!-- counter up area -->
+        </div>
+    </div>
+</div>
+<!-- rts-counter up area end -->
+<!-- start gallery section -->
+<div class="rts-gallery-area rts-section-gap gallery-bg bg_image">
+    <div class="container">
+        <div class="row">
+            <div class="rts-title-area gallery text-start pl_sm--20">
+                <h2 class="title">Ürünlerimiz</h2>
+            </div>
+        </div>
+       
+            <div class="row mt--45">
+                <div class="col-12">
+                    <div class="swiper mygallery mySwipers">
+                        
+                        <div class="swiper-wrapper gallery">
+
+                            @foreach (var item in Model.Products)
+                            {
+                                <div class="swiper-slide">
+
+                                    <div class="row g-5 w-g-100">
+                                        <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+                                            <div class="thumbnail-gallery">
+                                                <img src="~/Images/Product/@item.Img" alt="business-images">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+                                            <div class="bg-right-gallery">
+                                                
+                                                <a href="#">
+                                                    <h4 class="title">@item.Title</h4>
+                                                </a>
+                                                <p class="disc">
+                                                    @item.ShorText
+                                                </p>
+                                                <a class="rts-btn btn-primary" href="/Urun/UrunDetay/@item.Id">Ürün Detayları</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            }
+                            </div>
+                       
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+</div>
+
+<!-- start gallery section -->
+<!-- start trusted client section -->
+<div class="rts-trusted-client rts-section-gapBottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-area-client text-center">
+                    <p class="client-title">İş Ortaklarımız</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="client-wrapper-one">
+                <a href="#"><img src="~/assets/images/ortak/codefirst.png" alt="business_finbiz"></a>
+                <a href="#"><img src="~/assets/images/ortak/dev.jpg" alt="business_finbiz"></a>
+                <a href="#"><img src="~/assets/images/ortak/IBM.jpg" alt="business_finbiz"></a>
+                <a href="#"><img src="~/assets/images/ortak/ingenico.png" alt="business_finbiz"></a>
+                <a href="#"><img src="~/assets/images/ortak/oracle.jpg" alt="business_finbiz"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end trusted client section -->
+<!-- start team section -->
+<div class="rts-team-area rts-section-gap bg-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="rts-title-area team text-center">
+                    <p class="pre-title">
+                        POS Entegrasyonları
+                    </p>
+                    <h2 class="title">Pos Entegrasyonları</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row g-5 mt--0">
+
+            <div class="swiper mySwiperh1_team">
+                <div class="swiper-wrapper">
+                    @foreach (var item in Model.Contents.Where(c => c.OrderNumber >= 2 && c.OrderNumber <= 6))
+                    {
+
+                        <div class="swiper-slide">
+                            <div class="team-single-one-start">
+                                <div class="team-image-area">
+                                    <a href="team-details.html">
+
+                                        <div class="team-social">
+                                            <div class="main">
+                                                <i class="fal fa-plus"></i>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="single-details">
+                                    <a href="team-details.html">
+                                        <h5 class="title"></h5>
+                                        @item.Title
+                                    </a>
+                                    <p>@item.FullText</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rts-blog-area rts-section-gap bg-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-area text-center">
+                    <span>Haberler</span>
+                    <h2 class="title">Haberler & Güncellemeler</h2>
+                </div>
+            </div>
+        </div>
+        <div class="g-5 mt--20">
+            <div class="swiper mySwiperh1_blog">
+                <div class="swiper-wrapper">
+                    @foreach (var item in Model.News)
+                    {
+                        <div class="swiper-slide">
+                            <div class="single-blog-one-wrapper">
+                                <div class="thumbnail">
+                                    <img src="~/Images/News/@item.Img" alt="business_Blog">
+
+                                </div>
+                                <div class="blog-content">
+
+                                    <a href="blog-details.html">
+                                        <h5 class="title">
+                                            @item.Title
+                                        </h5>
+                                    </a>
+                                    <a class="rts-read-more btn-primary" href="/Haber/Index2/@item.Id">
+                                        <i class="far fa-arrow-right"></i>Devamını Oku
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- blog area end -->
+<!-- contact area start -->
+<div class="rts-contact-area contact-one">
+    <div class="container">
+        <div class="row align-items-center g-0">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                <div class="contact-image-one">
+                    <img src="~/assets/images/contact/01.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+                <div class="contact-form-area-one">
+                    <div class="rts-title-area contact text-start">
+                        <p class="pre-title">
+                            Randevu Oluşturun
+                        </p>
+                        <h2 class="title">Teklif Alın</h2>
+                    </div>
+                    <div id="form-messages"></div>
+                    <form id="contact-form" action="mailer.php" method="post">
+                        <div class="name-email">
+                            <input type="text" placeholder="Adınız" name="name" required>
+                            <input type="email" placeholder="Mailiniz" name="email" required>
+                        </div>
+                        <input type="text" placeholder="Firma Adı" name="subject">
+                        <textarea placeholder="Mesajınız" name="message"></textarea>
+                        <button type="submit" class="rts-btn btn-primary">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contact area end -->
+<!-- map area start -->
+<div class="rts-map-area bg-light-white">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <!-- map area left -->
+                <div class="mapdetails-inner-one">
+                    <div class="left-area single-wized">
+                        <h5 class="title"style="padding-top:20px;">İletişime Geçin</h5>
+                        <div class="details">
+                            <p>Work and general inquiries</p>
+                            <a class="number" href="tel:+90 (850) 346 36 82">+90 (850) 346 36 82</a>
+
+                            <p class="time-header">
+                                Yardım Saatleri:
+                            </p>
+                            <p class="time">
+                                Pazartesi – Cuma <br> 10.00-19.00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right-area single-wized">
+                        <h5 class="title" style="padding-top:20px;">Adresler</h5>
+                        <div class="details">
+                            <p>Şubeler</p>
+                            <p class="fas fa-map-marker-alt"> </p>
+                            <a class="office">
+                                İstanbul Aydın Üniversitesi Tekno Park Beşyol Mahallesi,  <br>
+                                İnönü Cd. No:38, 34295 A3/2 Kısım No: 219 Küçükçekmece/İstanbul
+                            </a>
+                            <hr />
+                            <p class="fas fa-map-marker-alt"> </p>
+                            <a class="office">
+                                Dalga Kule Residence, Flora Suits & Office Cevizli Mahallesi <br>
+                                30 Ağustos Caddesi No:13 DAP Yapı Dalga Kule B Blok No:66 Maltepe/İstanbul
+                            </a>
+
+                            <hr />
+                            <p class="fas fa-map-marker-alt"> </p>
+                            <a class="office">
+                                Bahçelievler Mahallesi,35.Cadde No:16, 06490 Çankaya/Ankara <br>
+                            </a>
+                            <p class="fas fa-map-marker-alt"> </p>
+                            <a class="office">
+                                Ahatli Mah.3164.Sk No:38/1 Kepez/Antalya <br>
+                            </a>
+
+                            <p class="headoffice">
+                                Ana Ofis
+                            </p>
+
+                            <p class="office" style="padding:10px;">Atatürk Üniversitesi Yerleşkesi Teknoloji Geliştirme Bölgesi B Blok Pk.25240 Kat:2 No:312 Yakutiye/Erzurum</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- map area right -->
+            </div>
+            <div class="col-lg-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.170459698997!2d41.23674827643909!3d39.89281568735932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406e5ee734eb6785%3A0xe20561ff1eb2d169!2sATA%20Teknokent!5e0!3m2!1str!2str!4v1688455614904!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- map area end -->

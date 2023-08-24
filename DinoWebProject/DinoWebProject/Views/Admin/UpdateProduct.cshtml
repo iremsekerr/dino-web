@@ -1,0 +1,51 @@
+﻿@model DinoWebProject.Models.Product
+@{
+    ViewBag.Title = "UpdateProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Ürün Güncelle</h2>
+
+
+@using (Html.BeginForm("UpdateProduct", "Admin", FormMethod.Post,new{ enctype = "multipart/form-data"}))
+{
+<div class="form-group">
+    @Html.Label("Sıra Numarası")
+    @Html.TextBoxFor(x => x.OrderNumber, new { @class = "form-control" })
+    <br /><br />
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    <br /> <br />
+    @Html.Label("Ürün Açıklaması")
+    @Html.TextAreaFor(x => x.FullText, new { @class = "form-control" })
+
+    <br /> <br />
+    @Html.Label("Ürün Kısa Açıklaması")
+    @Html.TextAreaFor(x => x.ShorText, new { @class = "form-control" })
+
+    <br /> <br />
+    @Html.Label("Ürün Fiyatı")
+    @Html.TextAreaFor(x => x.Price, new { @class = "form-control" })
+
+    <br /> <br />
+    @Html.Label("Ürün Görseli")
+    <input type="file" src="~/Images/Product/x => x.Img" name="Img" class="form-control-file" />
+    @Html.ValidationMessageFor(x => x.Img)
+    <small class="text-muted" style="color:red !important">Lütfen  görselin boyutunu 400x300 piksel olarak ayarlayın.</small>
+    <br />
+   
+    <br /> <br />
+    @Html.Label("Ürün Detay Görseli")
+    <input type="file" src="~/Images/Product/Detail/x => x.DetailImg" name="DetailImg" class="form-control-file" />
+  
+    @Html.ValidationMessageFor(x => x.DetailImg)
+    <small class="text-muted" style="color:red !important">Lütfen detay görselinin boyutunu 500x500 piksel olarak ayarlayın.</small>
+
+    <br /> <br />
+    <button class="btn btn-success">Güncelle</button>
+
+</div>
+}
+

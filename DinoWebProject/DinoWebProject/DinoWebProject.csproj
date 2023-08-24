@@ -1,0 +1,1214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8307100-0143-4403-9A6B-8B522BFF3BB7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DinoWebProject</RootNamespace>
+    <AssemblyName>DinoWebProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44364</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AnasayfaController.cs" />
+    <Compile Include="Controllers\DestekController.cs" />
+    <Compile Include="Controllers\HaberController.cs" />
+    <Compile Include="Controllers\HakkimizdaController.cs" />
+    <Compile Include="Controllers\IletisimController.cs" />
+    <Compile Include="Controllers\IsOrtaklariController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\SektorController.cs" />
+    <Compile Include="Controllers\UrunController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contents.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HomeViewModel\Class.cs" />
+    <Compile Include="Models\HomeViewModel\NewsModel.cs" />
+    <Compile Include="Models\HomeViewModel\ProductModel.cs" />
+    <Compile Include="Models\HomeViewModel\SectorModel.cs" />
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\News.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sector.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Support.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\images\Icons\cafe.png" />
+    <Content Include="assets\images\Icons\gida.png" />
+    <Content Include="assets\images\Icons\dagıtım.png" />
+    <Content Include="assets\images\Icons\insaat.png" />
+    <Content Include="assets\images\Icons\mobilya.png" />
+    <Content Include="assets\images\Icons\perakende.png" />
+    <Content Include="assets\images\Icons\tekstil.png" />
+    <Content Include="assets\images\Icons\uretim.png" />
+    <Content Include="assets\images\logolar %281%29\dinosoftemrahacun.png" />
+    <Content Include="assets\images\logolar %281%29\DİNOSOFT.png" />
+    <Content Include="assets\images\logolar %281%29\DİNOSOFT1.png" />
+    <Content Include="assets\images\ortak\codefirst.png" />
+    <Content Include="assets\images\ortak\dev.jpg" />
+    <Content Include="assets\images\ortak\IBM.jpg" />
+    <Content Include="assets\images\ortak\ingenico.png" />
+    <Content Include="assets\images\ortak\microsoft.png" />
+    <Content Include="assets\images\ortak\oracle.jpg" />
+    <Content Include="assets\images\ortak\payu.png" />
+    <Content Include="assets\images\ortak\Sql.png" />
+    <Content Include="assets\images\ortak\verifone.png" />
+    <Content Include="assets\images\ortak\yemeksepeti.png" />
+    <Content Include="assets\images\service\icon\online.png" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CoolAdmin-master\akademisyenekle.html" />
+    <Content Include="CoolAdmin-master\akademisyenler.html" />
+    <Content Include="CoolAdmin-master\bolumekle.html" />
+    <Content Include="CoolAdmin-master\bolumler.html" />
+    <Content Include="CoolAdmin-master\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="CoolAdmin-master\css\font-face.css" />
+    <Content Include="CoolAdmin-master\css\theme.css" />
+    <Content Include="CoolAdmin-master\fakulteekle.html" />
+    <Content Include="CoolAdmin-master\fakulteler.html" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100italic.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200italic.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300italic.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500italic.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600italic.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700italic.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800italic.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900italic.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-italic.svg" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-regular.svg" />
+    <Content Include="CoolAdmin-master\forget-pass.html" />
+    <Content Include="CoolAdmin-master\images\bg-title-01.jpg" />
+    <Content Include="CoolAdmin-master\images\bg-title-02.jpg" />
+    <Content Include="CoolAdmin-master\images\icon\avatar-01.jpg" />
+    <Content Include="CoolAdmin-master\images\icon\avatar-02.jpg" />
+    <Content Include="CoolAdmin-master\images\icon\avatar-03.jpg" />
+    <Content Include="CoolAdmin-master\images\icon\avatar-04.jpg" />
+    <Content Include="CoolAdmin-master\images\icon\avatar-05.jpg" />
+    <Content Include="CoolAdmin-master\images\icon\avatar-06.jpg" />
+    <Content Include="CoolAdmin-master\images\icon\avatar-big-01.jpg" />
+    <Content Include="CoolAdmin-master\images\icon\logo-blue.png" />
+    <Content Include="CoolAdmin-master\images\icon\logo-mini.png" />
+    <Content Include="CoolAdmin-master\images\icon\logo-white.png" />
+    <Content Include="CoolAdmin-master\images\icon\logo.png" />
+    <Content Include="CoolAdmin-master\images\icon\Untitled-1.jpg" />
+    <Content Include="CoolAdmin-master\index.html" />
+    <Content Include="CoolAdmin-master\js\bootstrap-datetimepicker.js" />
+    <Content Include="CoolAdmin-master\js\main.js" />
+    <Content Include="CoolAdmin-master\js\moment.js" />
+    <Content Include="CoolAdmin-master\login.html" />
+    <Content Include="CoolAdmin-master\media\9606031aabebde32fa96edeff071a132.jpg" />
+    <Content Include="CoolAdmin-master\register.html" />
+    <Content Include="CoolAdmin-master\vendor\animsition\animsition.min.css" />
+    <Content Include="CoolAdmin-master\vendor\animsition\animsition.min.js" />
+    <Content Include="CoolAdmin-master\vendor\bootstrap-4.1\bootstrap.min.css" />
+    <Content Include="CoolAdmin-master\vendor\bootstrap-4.1\bootstrap.min.js" />
+    <Content Include="CoolAdmin-master\vendor\bootstrap-4.1\popper.min.js" />
+    <Content Include="CoolAdmin-master\vendor\bootstrap-progressbar\bootstrap-progressbar-3.3.4.min.css" />
+    <Content Include="CoolAdmin-master\vendor\bootstrap-progressbar\bootstrap-progressbar.min.js" />
+    <Content Include="CoolAdmin-master\vendor\chartjs\Chart.bundle.min.js" />
+    <Content Include="CoolAdmin-master\vendor\circle-progress\circle-progress.js" />
+    <Content Include="CoolAdmin-master\vendor\circle-progress\circle-progress.min.js" />
+    <Content Include="CoolAdmin-master\vendor\countdown\countdowntime.js" />
+    <Content Include="CoolAdmin-master\vendor\countdown\jquery.countdown.min.js" />
+    <Content Include="CoolAdmin-master\vendor\countdown\moment-timezone-with-data.min.js" />
+    <Content Include="CoolAdmin-master\vendor\countdown\moment-timezone.min.js" />
+    <Content Include="CoolAdmin-master\vendor\countdown\moment.min.js" />
+    <Content Include="CoolAdmin-master\vendor\counter-up\jquery.counterup.min.js" />
+    <Content Include="CoolAdmin-master\vendor\counter-up\jquery.waypoints.min.js" />
+    <Content Include="CoolAdmin-master\vendor\counter-up\waypoints.min.js" />
+    <Content Include="CoolAdmin-master\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="CoolAdmin-master\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\css\fontawesome-all.min.css" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-brands-400.svg" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-regular-400.svg" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-solid-900.svg" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\CHANGELOG.txt" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\CONTRIBUTING.txt" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\fullcalendar.css" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\fullcalendar.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\fullcalendar.min.css" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\fullcalendar.min.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\fullcalendar.print.css" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\fullcalendar.print.min.css" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\gcal.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\gcal.min.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\lib\moment.min.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\LICENSE.txt" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale-all.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\af.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ar-dz.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ar-kw.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ar-ly.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ar-ma.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ar-sa.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ar-tn.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ar.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\be.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\bg.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\bs.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ca.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\cs.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\da.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\de-at.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\de-ch.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\de.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\el.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\en-au.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\en-ca.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\en-gb.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\en-ie.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\en-nz.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\es-do.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\es-us.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\es.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\et.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\eu.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\fa.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\fi.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\fr-ca.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\fr-ch.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\fr.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\gl.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\he.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\hi.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\hr.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\hu.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\id.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\is.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\it.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ja.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ka.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\kk.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ko.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\lb.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\lt.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\lv.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\mk.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ms-my.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ms.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\nb.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\nl-be.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\nl.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\nn.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\pl.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\pt-br.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\pt.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ro.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\ru.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\sk.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\sl.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\sq.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\sr-cyrl.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\sr.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\sv.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\th.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\tr.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\uk.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\vi.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\zh-cn.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\zh-hk.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\locale\zh-tw.js" />
+    <Content Include="CoolAdmin-master\vendor\fullcalendar-3.10.0\README.txt" />
+    <Content Include="CoolAdmin-master\vendor\jquery-3.2.1.min.js" />
+    <Content Include="CoolAdmin-master\vendor\jquery-ui.min.js" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\css\lightbox.css" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\images\close.png" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\images\loading.gif" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\images\next.png" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\images\prev.png" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\js\lightbox-plus-jquery.js" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\js\lightbox-plus-jquery.min.js" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\js\lightbox.js" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\js\lightbox.min.js" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\src\css\lightbox.css" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\src\images\close.png" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\src\images\loading.gif" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\src\images\next.png" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\src\images\prev.png" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\src\js\lightbox.js" />
+    <Content Include="CoolAdmin-master\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="CoolAdmin-master\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="CoolAdmin-master\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="CoolAdmin-master\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="CoolAdmin-master\vendor\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="CoolAdmin-master\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="CoolAdmin-master\vendor\progressbar\progressbar.js" />
+    <Content Include="CoolAdmin-master\vendor\progressbar\progressbar.min.js" />
+    <Content Include="CoolAdmin-master\vendor\select2\select2.min.css" />
+    <Content Include="CoolAdmin-master\vendor\select2\select2.min.js" />
+    <Content Include="CoolAdmin-master\vendor\slick\ajax-loader.gif" />
+    <Content Include="CoolAdmin-master\vendor\slick\fonts\slick.svg" />
+    <Content Include="CoolAdmin-master\vendor\slick\slick-theme.css" />
+    <Content Include="CoolAdmin-master\vendor\slick\slick.css" />
+    <Content Include="CoolAdmin-master\vendor\slick\slick.js" />
+    <Content Include="CoolAdmin-master\vendor\slick\slick.min.js" />
+    <Content Include="CoolAdmin-master\vendor\smk-accordion\accordion.css" />
+    <Content Include="CoolAdmin-master\vendor\smk-accordion\accordion.js" />
+    <Content Include="CoolAdmin-master\vendor\smk-accordion\accordion.min.js" />
+    <Content Include="CoolAdmin-master\vendor\sweetalert\sweetalert.min.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.brazil.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.europe.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.france.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.germany.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.min.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.russia.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.sampledata.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.usa.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jquery.vmap.world.js" />
+    <Content Include="CoolAdmin-master\vendor\vector-map\jqvmap.min.css" />
+    <Content Include="CoolAdmin-master\vendor\wow\animate.css" />
+    <Content Include="CoolAdmin-master\vendor\wow\wow.min.js" />
+    <Content Include="finbiz-html\404.html" />
+    <Content Include="finbiz-html\about-us.html" />
+    <Content Include="finbiz-html\accordion.html" />
+    <Content Include="finbiz-html\address-box.html" />
+    <Content Include="finbiz-html\appoinment.html" />
+    <Content Include="assets\css\plugins\animate.min.css" />
+    <Content Include="assets\css\plugins\fontawesome-5.css" />
+    <Content Include="assets\css\plugins\swiper.min.css" />
+    <Content Include="assets\css\plugins\unicons.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\vendor\bootstrap.min.css" />
+    <Content Include="assets\fonts\fa-brands-400.svg" />
+    <Content Include="assets\fonts\fa-duotone-900.svg" />
+    <Content Include="assets\fonts\fa-light-300.svg" />
+    <Content Include="assets\fonts\fa-regular-400.svg" />
+    <Content Include="assets\fonts\fa-solid-900.svg" />
+    <Content Include="assets\images\about\01.png" />
+    <Content Include="assets\images\about\02.png" />
+    <Content Include="assets\images\about\bg-01.jpg" />
+    <Content Include="assets\images\about\call.svg" />
+    <Content Include="assets\images\about\main\05.jpg" />
+    <Content Include="assets\images\about\main\06.jpg" />
+    <Content Include="assets\images\about\main\about-01-sm.jpg" />
+    <Content Include="assets\images\about\main\about-01.png" />
+    <Content Include="assets\images\about\main\about-02-sm.jpg" />
+    <Content Include="assets\images\about\main\about-02.png" />
+    <Content Include="assets\images\about\main\about-03.jpg" />
+    <Content Include="assets\images\about\main\about-04.jpg" />
+    <Content Include="assets\images\about\main\icon\01.svg" />
+    <Content Include="assets\images\about\main\icon\02.svg" />
+    <Content Include="assets\images\about\main\icon\03.svg" />
+    <Content Include="assets\images\about\main\user\01.png" />
+    <Content Include="assets\images\about\main\user\02.png" />
+    <Content Include="assets\images\about\main\user\03.png" />
+    <Content Include="assets\images\about\main\user\04.png" />
+    <Content Include="assets\images\about\main\user\05.png" />
+    <Content Include="assets\images\about\shape\01.png" />
+    <Content Include="assets\images\about\shape\02.png" />
+    <Content Include="assets\images\about\shape\03.png" />
+    <Content Include="assets\images\about\shape\04.png" />
+    <Content Include="assets\images\about\shape\play-btn.png" />
+    <Content Include="assets\images\about\sm-01.png" />
+    <Content Include="assets\images\appoinment\01.png" />
+    <Content Include="assets\images\appoinment\02.png" />
+    <Content Include="assets\images\appoinment\03.png" />
+    <Content Include="assets\images\appoinment\04.png" />
+    <Content Include="assets\images\appoinment\05.png" />
+    <Content Include="assets\images\appoinment\06.png" />
+    <Content Include="assets\images\banner\banner-01.jpg" />
+    <Content Include="assets\images\banner\banner-02.jpg" />
+    <Content Include="assets\images\banner\banner-03.jpg" />
+    <Content Include="assets\images\banner\banner-04.jpg" />
+    <Content Include="assets\images\banner\banner-05.png" />
+    <Content Include="assets\images\banner\banner-06.png" />
+    <Content Include="assets\images\banner\banner-07.png" />
+    <Content Include="assets\images\banner\banner-08.jpg" />
+    <Content Include="assets\images\banner\banner-09.jpg" />
+    <Content Include="assets\images\banner\banner-10.jpg" />
+    <Content Include="assets\images\banner\banner-11.png" />
+    <Content Include="assets\images\banner\banner-bg5.jpg" />
+    <Content Include="assets\images\banner\img.jpg" />
+    <Content Include="assets\images\banner\shape\01.png" />
+    <Content Include="assets\images\banner\shape\02.png" />
+    <Content Include="assets\images\banner\shape\03.png" />
+    <Content Include="assets\images\banner\shape\04.png" />
+    <Content Include="assets\images\banner\shape\05.png" />
+    <Content Include="assets\images\banner\shape\06.png" />
+    <Content Include="assets\images\banner\shape\07.png" />
+    <Content Include="assets\images\banner\shape\08.png" />
+    <Content Include="assets\images\banner\shape\bg.png" />
+    <Content Include="assets\images\banner\shape\close.png" />
+    <Content Include="assets\images\banner\shape\h7-banner.png" />
+    <Content Include="assets\images\banner\shape\pre-title.png" />
+    <Content Include="assets\images\banner\shape\Rectangle.png" />
+    <Content Include="assets\images\banner\shape\shape-h6.png" />
+    <Content Include="assets\images\bg\bg-shape-1.png" />
+    <Content Include="assets\images\bg\bg-shape-2.png" />
+    <Content Include="assets\images\blog\01.jpg" />
+    <Content Include="assets\images\blog\02.jpg" />
+    <Content Include="assets\images\blog\03.jpg" />
+    <Content Include="assets\images\blog\04.jpg" />
+    <Content Include="assets\images\blog\05.jpg" />
+    <Content Include="assets\images\blog\06.jpg" />
+    <Content Include="assets\images\blog\07.jpg" />
+    <Content Include="assets\images\blog\08.jpg" />
+    <Content Include="assets\images\blog\09.jpg" />
+    <Content Include="assets\images\blog\10.jpg" />
+    <Content Include="assets\images\blog\11.jpg" />
+    <Content Include="assets\images\blog\12.jpg" />
+    <Content Include="assets\images\blog\13.jpg" />
+    <Content Include="assets\images\blog\14.png" />
+    <Content Include="assets\images\blog\15.png" />
+    <Content Include="assets\images\blog\16.png" />
+    <Content Include="assets\images\blog\blog-lg-1.jpg" />
+    <Content Include="assets\images\blog\blog-lg-2.jpg" />
+    <Content Include="assets\images\blog\blog-lg-3.jpg" />
+    <Content Include="assets\images\blog\blog-lg-4.jpg" />
+    <Content Include="assets\images\blog\details\01.jpg" />
+    <Content Include="assets\images\blog\details\02.jpg" />
+    <Content Include="assets\images\blog\details\03.jpg" />
+    <Content Include="assets\images\blog\details\author.jpg" />
+    <Content Include="assets\images\blog\details\gallery\01.png" />
+    <Content Include="assets\images\blog\details\gallery\02.png" />
+    <Content Include="assets\images\blog\details\gallery\03.png" />
+    <Content Include="assets\images\blog\details\gallery\04.png" />
+    <Content Include="assets\images\blog\details\gallery\05.png" />
+    <Content Include="assets\images\blog\details\gallery\06.png" />
+    <Content Include="assets\images\blog\details\recent-post\01.png" />
+    <Content Include="assets\images\blog\details\recent-post\02.png" />
+    <Content Include="assets\images\blog\details\recent-post\03.png" />
+    <Content Include="assets\images\blog\details\recent-post\04.png" />
+    <Content Include="assets\images\blog\grid\01.jpg" />
+    <Content Include="assets\images\blog\grid\02.jpg" />
+    <Content Include="assets\images\blog\grid\03.jpg" />
+    <Content Include="assets\images\blog\grid\04.jpg" />
+    <Content Include="assets\images\blog\grid\05.jpg" />
+    <Content Include="assets\images\blog\grid\06.jpg" />
+    <Content Include="assets\images\blog\grid\07.jpg" />
+    <Content Include="assets\images\blog\grid\08.jpg" />
+    <Content Include="assets\images\blog\grid\09.jpg" />
+    <Content Include="assets\images\blog\grid\10.jpg" />
+    <Content Include="assets\images\breadcrumb\01.jpg" />
+    <Content Include="assets\images\business-case\01.jpg" />
+    <Content Include="assets\images\business-case\02.jpg" />
+    <Content Include="assets\images\business-case\03.jpg" />
+    <Content Include="assets\images\business-case\04.jpg" />
+    <Content Include="assets\images\business-case\05.jpg" />
+    <Content Include="assets\images\business-case\06.jpg" />
+    <Content Include="assets\images\business-case\07.jpg" />
+    <Content Include="assets\images\business-case\bg-01.jpg" />
+    <Content Include="assets\images\business-case\bg-02.jpg" />
+    <Content Include="assets\images\business-case\icon\01.png" />
+    <Content Include="assets\images\business-case\icon\02.png" />
+    <Content Include="assets\images\business-case\icon\03.png" />
+    <Content Include="assets\images\business-case\icon\shape-1.png" />
+    <Content Include="assets\images\business-case\icon\shape-2.png" />
+    <Content Include="assets\images\business-goal\01.jpg" />
+    <Content Include="assets\images\business-goal\01.png" />
+    <Content Include="assets\images\business-goal\02.jpg" />
+    <Content Include="assets\images\business-goal\03.jpg" />
+    <Content Include="assets\images\business-goal\04.jpg" />
+    <Content Include="assets\images\business-goal\05.png" />
+    <Content Include="assets\images\business-goal\characters.png" />
+    <Content Include="assets\images\business-goal\icon\01.png" />
+    <Content Include="assets\images\business-goal\icon\01.svg" />
+    <Content Include="assets\images\business-goal\icon\02.png" />
+    <Content Include="assets\images\business-goal\icon\02.svg" />
+    <Content Include="assets\images\business-goal\icon\03.svg" />
+    <Content Include="assets\images\business-goal\icon\04.svg" />
+    <Content Include="assets\images\business-goal\icon\05.svg" />
+    <Content Include="assets\images\business-goal\icon\bag.png" />
+    <Content Include="assets\images\business-goal\icon\box.png" />
+    <Content Include="assets\images\business-goal\icon\line.png" />
+    <Content Include="assets\images\business-goal\icon\setting.png" />
+    <Content Include="assets\images\business-goal\sm-01.jpg" />
+    <Content Include="assets\images\business-goal\team.png" />
+    <Content Include="assets\images\client\01.png" />
+    <Content Include="assets\images\client\02.png" />
+    <Content Include="assets\images\client\03.png" />
+    <Content Include="assets\images\client\04.png" />
+    <Content Include="assets\images\client\05.png" />
+    <Content Include="assets\images\client\06.png" />
+    <Content Include="assets\images\client\bg.jpg" />
+    <Content Include="assets\images\contact\01.jpg" />
+    <Content Include="assets\images\contact\01.png" />
+    <Content Include="assets\images\contact\02.jpg" />
+    <Content Include="assets\images\contact\02.png" />
+    <Content Include="assets\images\contact\03.png" />
+    <Content Include="assets\images\contact\shape\01.png" />
+    <Content Include="assets\images\contact\shape\01.svg" />
+    <Content Include="assets\images\contact\shape\02.png" />
+    <Content Include="assets\images\contact\shape\02.svg" />
+    <Content Include="assets\images\contact\shape\03.svg" />
+    <Content Include="assets\images\contact\shape\404.png" />
+    <Content Include="assets\images\contact\shape\location.svg" />
+    <Content Include="assets\images\counterup\bg-01.jpg" />
+    <Content Include="assets\images\counterup\icon\01.svg" />
+    <Content Include="assets\images\counterup\icon\02.svg" />
+    <Content Include="assets\images\counterup\icon\03.svg" />
+    <Content Include="assets\images\counterup\icon\04.svg" />
+    <Content Include="assets\images\counterup\icon\05.svg" />
+    <Content Include="assets\images\counterup\icon\06.svg" />
+    <Content Include="assets\images\counterup\icon\07.svg" />
+    <Content Include="assets\images\counterup\icon\08.svg" />
+    <Content Include="assets\images\counterup\icon\09.svg" />
+    <Content Include="assets\images\counterup\icon\10.svg" />
+    <Content Include="assets\images\counterup\icon\11.svg" />
+    <Content Include="assets\images\counterup\icon\12.svg" />
+    <Content Include="assets\images\cta\01.jpg" />
+    <Content Include="assets\images\cta\02.jpg" />
+    <Content Include="assets\images\cta\03.jpg" />
+    <Content Include="assets\images\cta\04.jpg" />
+    <Content Include="assets\images\cta\05.jpg" />
+    <Content Include="assets\images\cta\bg-01.jpg" />
+    <Content Include="assets\images\faq\01.png" />
+    <Content Include="assets\images\faq\02.png" />
+    <Content Include="assets\images\faq\bg-01.jpg" />
+    <Content Include="assets\images\faq\shape-2.png" />
+    <Content Include="assets\images\faq\shape.png" />
+    <Content Include="assets\images\fav.png" />
+    <Content Include="assets\images\feature\01.png" />
+    <Content Include="assets\images\feature\shape\01.png" />
+    <Content Include="assets\images\footer\callto-action.png" />
+    <Content Include="assets\images\footer\footer-bg-1.jpg" />
+    <Content Include="assets\images\footer\footer-bg-2.jpg" />
+    <Content Include="assets\images\footer\footer-bg-3.png" />
+    <Content Include="assets\images\footer\Group 160.png" />
+    <Content Include="assets\images\footer\h1-shape\01.svg" />
+    <Content Include="assets\images\footer\h1-shape\02.png" />
+    <Content Include="assets\images\footer\h1-shape\03.png" />
+    <Content Include="assets\images\footer\post\01.png" />
+    <Content Include="assets\images\footer\post\02.png" />
+    <Content Include="assets\images\footer\three-gallery\01.png" />
+    <Content Include="assets\images\footer\three-gallery\02.png" />
+    <Content Include="assets\images\footer\three-gallery\03.png" />
+    <Content Include="assets\images\footer\three-gallery\04.png" />
+    <Content Include="assets\images\footer\three-gallery\05.png" />
+    <Content Include="assets\images\footer\three-gallery\06.png" />
+    <Content Include="assets\images\footer\under-title-2.png" />
+    <Content Include="assets\images\footer\under-title.png" />
+    <Content Include="assets\images\gallery\01.jpg" />
+    <Content Include="assets\images\gallery\01.svg" />
+    <Content Include="assets\images\gallery\bg-vedio.png" />
+    <Content Include="assets\images\gallery\gallery-01.jpg" />
+    <Content Include="assets\images\gallery\gallery-02.jpg" />
+    <Content Include="assets\images\gallery\gallery-03.jpg" />
+    <Content Include="assets\images\gallery\gallery-bg-1.jpg" />
+    <Content Include="assets\images\gallery\icon\01.svg" />
+    <Content Include="assets\images\gallery\shape.png" />
+    <Content Include="assets\images\icon\menu-light.png" />
+    <Content Include="assets\images\icon\menu.png" />
+    <Content Include="assets\images\logo\logo-1.svg" />
+    <Content Include="assets\images\logo\logo-2.svg" />
+    <Content Include="assets\images\logo\logo-3.svg" />
+    <Content Include="assets\images\logo\logo-4.svg" />
+    <Content Include="assets\images\logo\logo-5.1.svg" />
+    <Content Include="assets\images\logo\logo-5.svg" />
+    <Content Include="assets\images\not optimize\01.svg" />
+    <Content Include="assets\images\pricing\bg-01.jpg" />
+    <Content Include="assets\images\pricing\bg-02.jpg" />
+    <Content Include="assets\images\product\01.jpg" />
+    <Content Include="assets\images\product\02.jpg" />
+    <Content Include="assets\images\product\03.jpg" />
+    <Content Include="assets\images\product\04.jpg" />
+    <Content Include="assets\images\product\05.jpg" />
+    <Content Include="assets\images\product\06.jpg" />
+    <Content Include="assets\images\product\bg-lg-01.jpg" />
+    <Content Include="assets\images\product\bg\01.jpg" />
+    <Content Include="assets\images\product\bg\02.jpg" />
+    <Content Include="assets\images\product\bg\sm-1.jpg" />
+    <Content Include="assets\images\product\d-01.jpg" />
+    <Content Include="assets\images\product\d-02.jpg" />
+    <Content Include="assets\images\product\d-03.jpg" />
+    <Content Include="assets\images\product\icon\01.jpg" />
+    <Content Include="assets\images\product\icon\02.jpg" />
+    <Content Include="assets\images\product\shape\navigation-white.png" />
+    <Content Include="assets\images\service\icon\01.jpg" />
+    <Content Include="assets\images\service\02.jpg" />
+    <Content Include="assets\images\service\03.jpg" />
+    <Content Include="assets\images\service\04.jpg" />
+    <Content Include="assets\images\service\05.jpg" />
+    <Content Include="assets\images\service\06.jpg" />
+    <Content Include="assets\images\service\07.jpg" />
+    <Content Include="assets\images\service\08.jpg" />
+    <Content Include="assets\images\service\09.jpg" />
+    <Content Include="assets\images\service\10.jpg" />
+    <Content Include="assets\images\service\11.jpg" />
+    <Content Include="assets\images\service\12.jpg" />
+    <Content Include="assets\images\service\13.jpg" />
+    <Content Include="assets\images\service\14.jpg" />
+    <Content Include="assets\images\service\15.jpg" />
+    <Content Include="assets\images\service\16.jpg" />
+    <Content Include="assets\images\service\bg-01.jpg" />
+    <Content Include="assets\images\service\bg-02.jpg" />
+    <Content Include="assets\images\service\bg-03.jpg" />
+    <Content Include="assets\images\service\bg-04.jpg" />
+    <Content Include="assets\images\service\bg-05.jpg" />
+    <Content Include="assets\images\service\h2\01.jpg" />
+    <Content Include="assets\images\service\h2\02.jpg" />
+    <Content Include="assets\images\service\h2\03.jpg" />
+    <Content Include="assets\images\service\icon\01.svg" />
+    <Content Include="assets\images\service\icon\02.svg" />
+    <Content Include="assets\images\service\icon\03.svg" />
+    <Content Include="assets\images\service\icon\04.svg" />
+    <Content Include="assets\images\service\icon\05.svg" />
+    <Content Include="assets\images\service\icon\06.svg" />
+    <Content Include="assets\images\service\icon\07.svg" />
+    <Content Include="assets\images\service\icon\08.svg" />
+    <Content Include="assets\images\service\icon\09.svg" />
+    <Content Include="assets\images\service\icon\10.svg" />
+    <Content Include="assets\images\service\icon\11.svg" />
+    <Content Include="assets\images\service\icon\12.svg" />
+    <Content Include="assets\images\service\icon\13.svg" />
+    <Content Include="assets\images\service\icon\14.svg" />
+    <Content Include="assets\images\service\icon\15.svg" />
+    <Content Include="assets\images\service\icon\16.svg" />
+    <Content Include="assets\images\service\icon\17.svg" />
+    <Content Include="assets\images\service\icon\18.svg" />
+    <Content Include="assets\images\service\icon\19.svg" />
+    <Content Include="assets\images\service\icon\20.svg" />
+    <Content Include="assets\images\service\icon\21.svg" />
+    <Content Include="assets\images\service\icon\22.svg" />
+    <Content Include="assets\images\service\icon\23.svg" />
+    <Content Include="assets\images\service\icon\24.svg" />
+    <Content Include="assets\images\service\icon\dot.png" />
+    <Content Include="assets\images\service\icon\service-logo1.svg" />
+    <Content Include="assets\images\service\icon\service-logo11.svg" />
+    <Content Include="assets\images\service\icon\service-logo2.svg" />
+    <Content Include="assets\images\service\icon\service-logo22.svg" />
+    <Content Include="assets\images\service\icon\service-logo3.svg" />
+    <Content Include="assets\images\service\icon\service-logo33.svg" />
+    <Content Include="assets\images\service\icon\service-logo4.svg" />
+    <Content Include="assets\images\service\icon\service-logo5.svg" />
+    <Content Include="assets\images\service\icon\service-logo6.svg" />
+    <Content Include="assets\images\service\icon\shape-1.png" />
+    <Content Include="assets\images\service\icon\w-dot.png" />
+    <Content Include="assets\images\service\sm-01.jpg" />
+    <Content Include="assets\images\team\bg-01.jpg" />
+    <Content Include="assets\images\team\bg-02.jpg" />
+    <Content Include="assets\images\team\bg-02.png" />
+    <Content Include="assets\images\team\tm\01.jpg" />
+    <Content Include="assets\images\team\tm\02.jpg" />
+    <Content Include="assets\images\team\tm\03.jpg" />
+    <Content Include="assets\images\team\tm\04.jpg" />
+    <Content Include="assets\images\team\tm\06.jpg" />
+    <Content Include="assets\images\team\tm\07.jpg" />
+    <Content Include="assets\images\team\tm\08.jpg" />
+    <Content Include="assets\images\team\tm\09.jpg" />
+    <Content Include="assets\images\team\tm\10.jpg" />
+    <Content Include="assets\images\team\tm\11.jpg" />
+    <Content Include="assets\images\team\tm\12.jpg" />
+    <Content Include="assets\images\team\tm\13.jpg" />
+    <Content Include="assets\images\team\tm\14.jpg" />
+    <Content Include="assets\images\team\tm\14.png" />
+    <Content Include="assets\images\team\tm\15.jpg" />
+    <Content Include="assets\images\team\tm\15.png" />
+    <Content Include="assets\images\team\tm\16.jpg" />
+    <Content Include="assets\images\team\tm\16.png" />
+    <Content Include="assets\images\team\tm\17.jpg" />
+    <Content Include="assets\images\team\tm\17.png" />
+    <Content Include="assets\images\team\tm\lg-01.jpg" />
+    <Content Include="assets\images\team\tm\lg-02.jpg" />
+    <Content Include="assets\images\team\tm\lg-03.jpg" />
+    <Content Include="assets\images\team\tm\team-lg.jpg" />
+    <Content Include="assets\images\testimonials\01.png" />
+    <Content Include="assets\images\testimonials\02.png" />
+    <Content Include="assets\images\testimonials\03.png" />
+    <Content Include="assets\images\testimonials\04.png" />
+    <Content Include="assets\images\testimonials\05.png" />
+    <Content Include="assets\images\testimonials\06.png" />
+    <Content Include="assets\images\testimonials\07.png" />
+    <Content Include="assets\images\testimonials\08.png" />
+    <Content Include="assets\images\testimonials\bg-01.jpg" />
+    <Content Include="assets\images\testimonials\bg-02.jpg" />
+    <Content Include="assets\images\testimonials\bg-03.jpg" />
+    <Content Include="assets\images\testimonials\icon\01.png" />
+    <Content Include="assets\images\testimonials\icon\02.png" />
+    <Content Include="assets\images\testimonials\icon\03.png" />
+    <Content Include="assets\images\testimonials\icon\logo-01.png" />
+    <Content Include="assets\images\testimonials\icon\logo-02.png" />
+    <Content Include="assets\images\testimonials\icon\logo-03.png" />
+    <Content Include="assets\images\testimonials\icon\logo-04.png" />
+    <Content Include="assets\images\testimonials\shape\01.svg" />
+    <Content Include="assets\images\testimonials\shape\02.png" />
+    <Content Include="assets\images\testimonials\shape\03.png" />
+    <Content Include="assets\images\working-step\bg-01.jpg" />
+    <Content Include="assets\images\working-step\bg-02.jpg" />
+    <Content Include="assets\images\working-step\icon\01.svg" />
+    <Content Include="assets\images\working-step\icon\02.svg" />
+    <Content Include="assets\images\working-step\icon\03.svg" />
+    <Content Include="assets\images\working-step\icon\04.svg" />
+    <Content Include="assets\images\working-step\icon\05.svg" />
+    <Content Include="assets\images\working-step\icon\06.svg" />
+    <Content Include="assets\images\working-step\icon\07.svg" />
+    <Content Include="assets\images\working-step\icon\08.svg" />
+    <Content Include="assets\images\working-step\icon\09.svg" />
+    <Content Include="assets\images\working-step\icon\10.svg" />
+    <Content Include="assets\images\working-step\icon\11.svg" />
+    <Content Include="assets\images\working-step\icon\12.svg" />
+    <Content Include="assets\images\working-step\icon\goal.svg" />
+    <Content Include="assets\images\working-step\icon\save.svg" />
+    <Content Include="assets\images\working-step\icon\target.svg" />
+    <Content Include="assets\images\working-step\icon\user.svg" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\plugins\contact.form.js" />
+    <Content Include="assets\js\plugins\counterup.js" />
+    <Content Include="assets\js\plugins\sal.min.js" />
+    <Content Include="assets\js\plugins\swiper.js" />
+    <Content Include="assets\js\vendor\bootstrap.min.js" />
+    <Content Include="assets\js\vendor\jquery.min.js" />
+    <Content Include="assets\js\vendor\jqueryui.js" />
+    <Content Include="assets\js\vendor\waypoint.js" />
+    <Content Include="finbiz-html\blog-details.html" />
+    <Content Include="finbiz-html\blog-grid.html" />
+    <Content Include="finbiz-html\blog-list.html" />
+    <Content Include="finbiz-html\blog-quote.html" />
+    <Content Include="finbiz-html\blog-slider.html" />
+    <Content Include="finbiz-html\brand.html" />
+    <Content Include="finbiz-html\button.html" />
+    <Content Include="finbiz-html\contact-form.html" />
+    <Content Include="finbiz-html\contactus.html" />
+    <Content Include="finbiz-html\counter.html" />
+    <Content Include="finbiz-html\cta.html" />
+    <Content Include="finbiz-html\heading.html" />
+    <Content Include="finbiz-html\index-eight.html" />
+    <Content Include="finbiz-html\index-five.html" />
+    <Content Include="finbiz-html\index-four.html" />
+    <Content Include="finbiz-html\index-seven.html" />
+    <Content Include="finbiz-html\index-six.html" />
+    <Content Include="finbiz-html\index-three.html" />
+    <Content Include="finbiz-html\index-two copy.html" />
+    <Content Include="finbiz-html\index-two.html" />
+    <Content Include="finbiz-html\index.html" />
+    <Content Include="finbiz-html\mailer.php" />
+    <Content Include="finbiz-html\onepage-eight.html" />
+    <Content Include="finbiz-html\onepage-five.html" />
+    <Content Include="finbiz-html\onepage-four.html" />
+    <Content Include="finbiz-html\onepage-one.html" />
+    <Content Include="finbiz-html\onepage-seven.html" />
+    <Content Include="finbiz-html\onepage-six..html" />
+    <Content Include="finbiz-html\onepage-six.html" />
+    <Content Include="finbiz-html\onepage-three.html" />
+    <Content Include="finbiz-html\onepage-two.html" />
+    <Content Include="finbiz-html\our-service copy.html" />
+    <Content Include="finbiz-html\our-service.html" />
+    <Content Include="finbiz-html\portfolio-style-2.html" />
+    <Content Include="finbiz-html\portfolio-style-3.html" />
+    <Content Include="finbiz-html\portfolio-style-4.html" />
+    <Content Include="finbiz-html\portfolio-style-5.html" />
+    <Content Include="finbiz-html\price-plan.html" />
+    <Content Include="finbiz-html\pricing.html" />
+    <Content Include="finbiz-html\progress-bar.html" />
+    <Content Include="finbiz-html\project-details.html" />
+    <Content Include="finbiz-html\project.html" />
+    <Content Include="finbiz-html\service-2 copy.html" />
+    <Content Include="finbiz-html\service-2.html" />
+    <Content Include="finbiz-html\service-3.html" />
+    <Content Include="finbiz-html\service-details.html" />
+    <Content Include="finbiz-html\tab-addon.html" />
+    <Content Include="finbiz-html\tab.html" />
+    <Content Include="finbiz-html\team-details.html" />
+    <Content Include="finbiz-html\team-style-2.html" />
+    <Content Include="finbiz-html\team-style-3.html" />
+    <Content Include="finbiz-html\team-style-4.html" />
+    <Content Include="finbiz-html\team-style-5.html" />
+    <Content Include="finbiz-html\team.html" />
+    <Content Include="finbiz-html\testimonial-style-1.html" />
+    <Content Include="finbiz-html\testimonial.html" />
+    <Content Include="finbiz-html\testimonials.html" />
+    <Content Include="finbiz-html\typography.html" />
+    <Content Include="finbiz-html\video.html" />
+    <Content Include="finbiz-html\working-process.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="assets\fonts\fa-brands-400.eot" />
+    <Content Include="assets\fonts\fa-brands-400.ttf" />
+    <Content Include="assets\fonts\fa-brands-400.woff" />
+    <Content Include="assets\fonts\fa-brands-400.woff2" />
+    <Content Include="assets\fonts\fa-duotone-900.eot" />
+    <Content Include="assets\fonts\fa-duotone-900.ttf" />
+    <Content Include="assets\fonts\fa-duotone-900.woff" />
+    <Content Include="assets\fonts\fa-duotone-900.woff2" />
+    <Content Include="assets\fonts\fa-light-300.eot" />
+    <Content Include="assets\fonts\fa-light-300.ttf" />
+    <Content Include="assets\fonts\fa-light-300.woff" />
+    <Content Include="assets\fonts\fa-light-300.woff2" />
+    <Content Include="assets\fonts\fa-regular-400.eot" />
+    <Content Include="assets\fonts\fa-regular-400.ttf" />
+    <Content Include="assets\fonts\fa-regular-400.woff" />
+    <Content Include="assets\fonts\fa-regular-400.woff2" />
+    <Content Include="assets\fonts\fa-solid-900.eot" />
+    <Content Include="assets\fonts\fa-solid-900.ttf" />
+    <Content Include="assets\fonts\fa-solid-900.woff" />
+    <Content Include="assets\fonts\fa-solid-900.woff2" />
+    <Content Include="assets\images\about\main\Thumbs.db" />
+    <Content Include="assets\images\about\main\user\Thumbs.db" />
+    <Content Include="assets\images\about\Thumbs.db" />
+    <Content Include="assets\images\appoinment\Thumbs.db" />
+    <Content Include="assets\images\banner\it-1.webp" />
+    <Content Include="assets\images\banner\it-2.webp" />
+    <Content Include="assets\images\banner\it-3.webp" />
+    <Content Include="assets\images\banner\shape\shape.webp" />
+    <Content Include="assets\images\bg\Thumbs.db" />
+    <Content Include="assets\images\breadcrumb\Thumbs.db" />
+    <Content Include="assets\images\business-goal\Thumbs.db" />
+    <Content Include="assets\images\faq\customer.webp" />
+    <Content Include="assets\images\faq\education.webp" />
+    <Content Include="assets\images\faq\hospitality-1.webp" />
+    <Content Include="assets\images\faq\info.webp" />
+    <Content Include="assets\images\faq\logistics.webp" />
+    <Content Include="assets\images\faq\steel-factory.webp" />
+    <Content Include="assets\images\feature\shape\Thumbs.db" />
+    <Content Include="assets\images\feature\Thumbs.db" />
+    <Content Include="assets\images\gallery\Thumbs.db" />
+    <Content Include="assets\images\logo\logo.webp" />
+    <Content Include="assets\images\team\Thumbs.db" />
+    <Content Include="assets\images\working-step\Thumbs.db" />
+    <Content Include="assets\maps\style.css.map" />
+    <Content Include="assets\scss\default\_animations.scss" />
+    <Content Include="assets\scss\default\_common.scss" />
+    <Content Include="assets\scss\default\_forms.scss" />
+    <Content Include="assets\scss\default\_mixins.scss" />
+    <Content Include="assets\scss\default\_reset.scss" />
+    <Content Include="assets\scss\default\_sal.scss" />
+    <Content Include="assets\scss\default\_shortcode.scss" />
+    <Content Include="assets\scss\default\_spacing.scss" />
+    <Content Include="assets\scss\default\_text-animation.scss" />
+    <Content Include="assets\scss\default\_typography.scss" />
+    <Content Include="assets\scss\default\_variables.scss" />
+    <Content Include="assets\scss\elements\_about.scss" />
+    <Content Include="assets\scss\elements\_appoinment.scss" />
+    <Content Include="assets\scss\elements\_back-totop.scss" />
+    <Content Include="assets\scss\elements\_banner.scss" />
+    <Content Include="assets\scss\elements\_blog.scss" />
+    <Content Include="assets\scss\elements\_business-goal.scss" />
+    <Content Include="assets\scss\elements\_button.scss" />
+    <Content Include="assets\scss\elements\_contact.scss" />
+    <Content Include="assets\scss\elements\_counterup.scss" />
+    <Content Include="assets\scss\elements\_cta.scss" />
+    <Content Include="assets\scss\elements\_faq.scss" />
+    <Content Include="assets\scss\elements\_feature.scss" />
+    <Content Include="assets\scss\elements\_footer.scss" />
+    <Content Include="assets\scss\elements\_gallery.scss" />
+    <Content Include="assets\scss\elements\_map-area.scss" />
+    <Content Include="assets\scss\elements\_preloader.scss" />
+    <Content Include="assets\scss\elements\_pricing.scss" />
+    <Content Include="assets\scss\elements\_project.scss" />
+    <Content Include="assets\scss\elements\_service.scss" />
+    <Content Include="assets\scss\elements\_swiper.scss" />
+    <Content Include="assets\scss\elements\_team-details.scss" />
+    <Content Include="assets\scss\elements\_team.scss" />
+    <Content Include="assets\scss\elements\_testimonial.scss" />
+    <Content Include="assets\scss\elements\_trsted-client.scss" />
+    <Content Include="assets\scss\elements\_trusted-client.scss" />
+    <Content Include="assets\scss\elements\_working-process.scss" />
+    <Content Include="assets\scss\header\_breadcrumb.scss" />
+    <Content Include="assets\scss\header\_header.scss" />
+    <Content Include="assets\scss\header\_mobile-menu.scss" />
+    <Content Include="assets\scss\header\_nav.scss" />
+    <Content Include="assets\scss\style.scss" />
+    <Content Include="assets\images\logolar %281%29\DİNOSOFT.pdf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100italic.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100italic.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100italic.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-100italic.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200italic.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200italic.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200italic.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-200italic.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300italic.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300italic.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300italic.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-300italic.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500italic.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500italic.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500italic.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-500italic.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600italic.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600italic.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600italic.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-600italic.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700italic.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700italic.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700italic.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-700italic.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800italic.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800italic.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800italic.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-800italic.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900italic.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900italic.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900italic.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-900italic.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-italic.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-italic.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-italic.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-italic.woff2" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-regular.eot" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-regular.ttf" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-regular.woff" />
+    <Content Include="CoolAdmin-master\fonts\poppins\poppins-v5-latin-regular.woff2" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-brands-400.eot" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-brands-400.ttf" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-brands-400.woff" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-brands-400.woff2" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-regular-400.eot" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-regular-400.ttf" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-regular-400.woff" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-regular-400.woff2" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-solid-900.eot" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-solid-900.ttf" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-solid-900.woff" />
+    <Content Include="CoolAdmin-master\vendor\font-awesome-5\webfonts\fa-solid-900.woff2" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\js\lightbox-plus-jquery.min.map" />
+    <Content Include="CoolAdmin-master\vendor\lightbox2\dist\js\lightbox.min.map" />
+    <Content Include="CoolAdmin-master\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="CoolAdmin-master\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="CoolAdmin-master\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="CoolAdmin-master\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="CoolAdmin-master\vendor\slick\config.rb" />
+    <Content Include="CoolAdmin-master\vendor\slick\fonts\slick.eot" />
+    <Content Include="CoolAdmin-master\vendor\slick\fonts\slick.ttf" />
+    <Content Include="CoolAdmin-master\vendor\slick\fonts\slick.woff" />
+    <Content Include="CoolAdmin-master\vendor\slick\slick-theme.less" />
+    <Content Include="CoolAdmin-master\vendor\slick\slick-theme.scss" />
+    <Content Include="CoolAdmin-master\vendor\slick\slick.less" />
+    <Content Include="CoolAdmin-master\vendor\slick\slick.scss" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Anasayfa\Index.cshtml" />
+    <Content Include="Views\Sektor\SektorDetay.cshtml" />
+    <Content Include="Views\Iletisim\Index.cshtml" />
+    <Content Include="Views\Hakkimizda\Hakkimizda.cshtml" />
+    <Content Include="Views\Urun\Urunler.cshtml" />
+    <Content Include="Views\Urun\UrunDetay.cshtml" />
+    <Content Include="Views\Haber\Haberler.cshtml" />
+    <Content Include="Views\Sektor\Sektorler.cshtml" />
+    <Content Include="Views\Shared\_LoginLayout.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\GetProductList.cshtml" />
+    <Content Include="Views\Admin\AddProduct.cshtml" />
+    <Content Include="Views\Admin\GetSectorList.cshtml" />
+    <Content Include="Views\Admin\AddSector.cshtml" />
+    <Content Include="Views\Admin\GetContentList.cshtml" />
+    <Content Include="Views\Admin\AddContent.cshtml" />
+    <Content Include="Views\Admin\GetNewsList.cshtml" />
+    <Content Include="Views\Admin\AddNews.cshtml" />
+    <Content Include="Views\Haber\HaberDetay.cshtml" />
+    <Content Include="Views\Admin\UpdateContent.cshtml" />
+    <Content Include="Views\Admin\UpdateSector.cshtml" />
+    <Content Include="Views\Admin\UpdateNews.cshtml" />
+    <Content Include="Views\Admin\UpdateProduct.cshtml" />
+    <Content Include="Views\Destek\UrunDestegi.cshtml" />
+    <Content Include="Views\Destek\SatisDestegi.cshtml" />
+    <Content Include="Views\Admin\GetSupportList.cshtml" />
+    <Content Include="Views\Admin\AddSupport.cshtml" />
+    <Content Include="Views\Admin\UpdateSupport.cshtml" />
+    <Content Include="Views\Anasayfa\_NavbarSectorList.cshtml" />
+    <Content Include="Views\Anasayfa\_NavbarProductList.cshtml" />
+    <Content Include="Views\Anasayfa\_FooterProductList.cshtml" />
+    <Content Include="Views\Anasayfa\_FooterNewsList.cshtml" />
+    <Content Include="Views\Destek\DemoKurulumu.cshtml" />
+    <Content Include="Views\Destek\DestekVideolari.cshtml" />
+    <Content Include="Views\IsOrtaklari\DinosoftİsOrtakligi.cshtml" />
+    <Content Include="Views\IsOrtaklari\IsOrtakligiBasvuru.cshtml" />
+    <Content Include="Views\Anasayfa\_MobileMenuSectorList.cshtml" />
+    <Content Include="Views\Anasayfa\_MobileMenuProductList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\Content\" />
+    <Folder Include="Images\Icon\" />
+    <Folder Include="Images\News\" />
+    <Folder Include="Images\Product\Detail\" />
+    <Folder Include="Images\Sector\Detail\" />
+    <Folder Include="Images\Support\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56552</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44364/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

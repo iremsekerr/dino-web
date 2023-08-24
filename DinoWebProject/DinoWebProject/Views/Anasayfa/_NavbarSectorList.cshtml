@@ -1,0 +1,23 @@
+﻿@model DinoWebProject.Models.HomeViewModel.SectorModel
+<li class="has-droupdown">
+    <a class="nav-link" href="/Sektor/Sektorler">Sektörler</a>
+    <ul class="submenu menu-link">
+        <li class="menu-item">
+            <a class="tag" href="#">Sektörler</a>
+            @foreach (var item in Model.Sectors)
+            {<ul>
+                    <li><a href="/Sektor/SektorDetay/@item.Id">@item.Title</a></li>
+
+
+                </ul>
+
+            }
+
+
+        </li>
+
+    </ul>
+</li>
+
+
+

@@ -1,0 +1,68 @@
+﻿@model DinoWebProject.Models.HomeViewModel.Class
+@{
+    ViewBag.Title = "GetProductList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <!-- DATA TABLE -->
+        <h3 class="title-5 m-b-35"> <strong>ÜRÜNLER</strong></h3>
+    </div>
+
+    <div class="table-responsive table-responsive-data2">
+        <table class="table table-data2">
+            <thead>
+                <tr>
+
+                    <th><strong>Ürün Id</strong></th>
+                    <th><strong>Sıra Numarası</strong></th>
+                    <th><strong>Ürün Adı</strong></th>
+                    <th><strong>Ürün Kısa Açıklaması</strong></th>
+                    <th><strong>Ürün Görseli </strong></th>
+                    <th><strong>Ürün Detay Görseli </strong></th>
+                    <th><strong>Ürün Fiyatı </strong></th>
+                    <th><strong>Ürün Tam Açıklaması </strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in Model.Products)
+                {
+                    <tr class="tr-shadow">
+                        <td>@x.Id</td>
+                        <td>@x.OrderNumber</td>
+                        <td>@x.Title</td>
+                        <td>@x.ShorText</td>
+                        <td><img src="~/Images/Product/@x.Img"  width="100px" height="90px" /></td>
+                        <td><img src="~/Images/Product/Detail/@x.DetailImg" width="100px" height="90px" /></td>
+                        <td>@x.Price</td>
+                        <td>@x.FullText</td>
+
+                        <td>
+                            <div class="table-data-feature">
+                                <a href="/Admin/RemoveProduct/@x.Id">
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="zmdi zmdi-delete"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-data-feature">
+                                <a href="/Admin/UpdateProduct/@x.Id">
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="zmdi zmdi-edit"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <!-- END DATA TABLE -->
+</div>
+

@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "AddContent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <strong> İÇERİK EKLE</strong>
+            </div>
+            <div class="card-body card-block">
+                <form asp-controller="Admin" asp-action="AddContent" method="post" enctype="multipart/form-data" class="form-horizontal">
+                    <label><strong>Sıra Numarası</strong></label>
+                    <input type="text" class="form-control" name="OrderNumber" />
+                    <br />
+
+                    <br />
+                    <label><strong>İçerik Başlığı</strong></label>
+                    <input type="text" class="form-control" name="Title" /><br />
+                    <label><strong>İçerik Açıklaması</strong></label>
+                    <input type="text" class="form-control" name="FullText" /><br />
+                    <br />
+
+                    <br />
+                    <label><strong>İçerik Görseli</strong></label><br />
+                    <input type="file" name="Img" class="form-control" />
+                    
+                    <br />
+                    <button class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i>İÇERİK EKLE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

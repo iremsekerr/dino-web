@@ -1,0 +1,220 @@
+﻿@model DinoWebProject.Models.HomeViewModel.Class
+
+<!-- start breadcrumb area -->
+<div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
+                <h1 class="title">Ürün Detayı</h1>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="bread-tag">
+                    <a href="index.html">Ana Sayfa</a>
+                    <span> / </span>
+                    <a href="#" class="active">Ürün Detayı</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb area -->
+<!-- start service details area -->
+<div class="rts-service-details-area rts-section-gap">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model.Products)
+            {
+                <div class="service-detials-step-1">
+                    <div class="thumbnail">
+                        <img src="~/Images/Product/@item.Img" style="height:500px;width:500px" alt="business-area">
+                    </div>
+                    <h4 class="title">@item.Title</h4>
+                    <p class="disc">
+                        @item.FullText
+
+                    </p>
+
+                    <div class="row g-5 mt--30 mb--40">
+                        <div class="col-lg-6">
+                            <!-- single service details card -->
+                            <div class="service-details-card">
+                                <div class="thumbnail">
+                                    <img src="~/assets/images/service/icon/09.svg" alt="" class="icon">
+                                </div>
+                                <div class="details">
+                                    <h6 class="title">İşinizi Büyütün</h6>
+                                    <p class="disc">Dinosoft Bussines Ailesine Katılarak Siz de Kendi Sektörünüzde Öncü Olun</p>
+                                </div>
+                            </div>
+                            <!-- single service details card End -->
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- single service details card -->
+                            <div class="service-details-card">
+                                <div class="thumbnail">
+                                    <img src="~/assets/images/service/icon/10.svg" alt="" class="icon">
+                                </div>
+                                <div class="details">
+                                    <h6 class="title">7/24 Kaliteli Servis</h6>
+                                    <p class="disc">Dinosoft Bussines Solutions Bünyesinde İşinizin Verimliliğini Artırın.</p>
+                                </div>
+                            </div>
+                            <!-- single service details card End -->
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- single service details card -->
+                            <div class="service-details-card">
+                                <div class="thumbnail">
+                                    <img src="~/assets/images/service/icon/11.svg" alt="" class="icon">
+                                </div>
+                                <div class="details">
+                                    <h6 class="title">İşinizi Kolaylaştırın</h6>
+                                    <p class="disc">Sizde Hemen Bize Katılarak İş Yönetiminizi Kolaylaştırın.</p>
+                                </div>
+                            </div>
+                            <!-- single service details card End -->
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- single service details card -->
+                            <div class="service-details-card">
+                                <div class="thumbnail">
+                                    <img src="~/assets/images/service/icon/12.svg" alt="" class="icon">
+                                </div>
+                                <div class="details">
+                                    <h6 class="title">Verilerinizi Tek Noktadan Uçtan Uca Yönetin</h6>
+                                    <p class="disc">Dinosoft Ürünlerinin Sağladığı Avantajlarla Verilerinizi Kolayca Yönetin</p>
+                                </div>
+                            </div>
+                            <!-- single service details card End -->
+                        </div>
+                    </div>
+
+                </div>
+            }
+            <div class="col-xl-8 col-md-12 col-sm-12 col-12">
+                <!-- service details left area start -->
+
+
+                <div class="service-detials-step-2 mt--40">
+                    <h4 class="title">3 Adımda Bize Katılın</h4>
+                    <h6 style="color:firebrick !important">
+                        Sizde İşinizi Bir Üst Seviyeye Taşımak İçin Bizi Tercih Edin Ve Alanında Uzman Ekibimize Hemen Katılın.
+
+                    </h6>
+                    <!-- stem-area start -->
+                    <div class="row  mb--40 g-5 mb_md--20 mb_sm--20">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="single-service-step text-center">
+                                <p class="step">01</p>
+                                <h6 class="title">
+                                    BİRİNCİ ADIM
+                                </h6>
+                                <p class="disc">
+                                    Sektörünüze En Uygun İş Ortaklığını Seçin
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="single-service-step text-center">
+                                <p class="step">02</p>
+                                <h6 class="title">
+                                    İKİNCİ ADIM
+                                </h6>
+                                <p class="disc">
+                                    Ürünlerimiz Ve Ortaklıklar İçin Bizimle İletişime Geçin
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="single-service-step text-center">
+                                <p class="step">03</p>
+                                <h6 class="title">
+                                    ÜÇÜNCÜ ADIM
+                                </h6>
+                                <p class="disc">
+                                    Size En Uygun Ürün Ve Teklifle İşinizi Bir Üst Seviyeye Taşıyalım
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- stem-area End -->
+                </div>
+                <!-- service details left area end -->
+                <div class="service-detials-step-3 mt--70 mt_md--50">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="thumbnail sm-thumb-service">
+                                <img src="~/assets/images/service/sm-01.jpg" alt="Service">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 mb_md--20 mb_sm--20">
+                            <h4 class="title">Müşteri Avantajları</h4>
+                            <p class="disc">
+                                Aramıza katılın sektörünüzün öncülerinden olun.
+                            </p>
+                            <div class="single-banifits">
+                                <i class="far fa-check-circle"></i>
+                                <span>Hızlı Ve Güvenilir Ürünler</span>
+                            </div>
+                            <div class="single-banifits">
+                                <i class="far fa-check-circle"></i>
+                                <span>Her Sektöre Uygun Yapı</span>
+                            </div>
+                            <div class="single-banifits">
+                                <i class="far fa-check-circle"></i>
+                                <span>7/24 Sınırız Destek</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--rts blog wizered area -->
+
+            <div class="col-xl-4 col-md-12 col-sm-12 col-12 mt_lg--60 pl--50 pl_md--0 pl-lg-controler pl_sm--0">
+                <!-- single wizered start -->
+
+                <div class="rts-single-wized Categories service">
+                    <div class="wized-header">
+                        <h5 class="title">
+                            Ürünler
+                        </h5>
+                    </div>
+                    @foreach (var item in ViewBag.modal)
+                    {
+                        <div class="wized-body">
+
+                            <!-- single categoris -->
+                            <ul class="single-categories">
+                                <li><a href="/Urun/UrunDetay/@item.Id">@item.Title<i class="far fa-long-arrow-right"></i></a></li>
+                            </ul>
+                            <!-- single categoris End -->
+                            <!-- single categoris End -->
+                        </div>
+                    }
+
+                </div>
+
+
+
+                <!-- single wizered End -->
+                <!-- single wizered End -->
+                <!-- single wizered start -->
+                <div class="rts-single-wized contact service">
+                    <div class="wized-header">
+                        <a href="#"><img src="~/assets/images/logo/logo-2.svg" alt="Business_logo"></a>
+                    </div>
+                    <div class="wized-body">
+                        <h5 class="title">
+                            Yardıma İhtiyacınız Var Mı? Size Yardım İçin Buradayız
+                        </h5>
+                        <a class="rts-btn btn-primary" href="/Iletisim/Index">Bize Ulaşın</a>
+                    </div>
+                </div>
+                <!-- single wizered End -->
+            </div>
+            <!-- rts- blog wizered end area -->
+        </div>
+    </div>
+</div>
+<!-- End service details area -->

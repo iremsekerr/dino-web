@@ -1,0 +1,67 @@
+﻿@model DinoWebProject.Models.HomeViewModel.Class
+@{
+    ViewBag.Title = "GetContentList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-6">
+        <!-- DATA TABLE -->
+        <h3 class="title-5 m-b-35"> <strong>İÇERİKLER</strong></h3>
+    </div>
+
+    <div class="table-responsive table-responsive-data2">
+        <table class="table table-data2">
+            <thead>
+                <tr>
+
+                    <th><strong>İçerik Id</strong></th>
+                    <th><strong>Sıra Numarası</strong></th>
+                    <th><strong>İçerik Başlığı</strong></th>
+                    <th><strong>İçerik Görseli </strong></th>
+                    <th><strong>İçerik Açıklaması </strong></th>
+
+
+            </thead>
+            <tbody>
+                @foreach (var x in Model.Contents)
+                {
+                    <tr class="tr-shadow">
+                        <td>@x.Id</td>
+                        <td>@x.OrderNumber</td>
+                        <td>@x.Title</td>
+                        <td><img src="~/Images/Content/@x.Img" alt="Alternate Text" width="100px" height="90px" /></td>
+
+                        <td>@x.FullText</td>
+
+                       
+
+                        <td>
+                            <div class="table-data-feature">
+                                <a href="/Admin/RemoveContent/@x.Id">
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="zmdi zmdi-delete"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="table-data-feature">
+                                <a href="/Admin/UpdateContent/@x.Id">
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="zmdi zmdi-edit"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <!-- END DATA TABLE -->
+</div>
+

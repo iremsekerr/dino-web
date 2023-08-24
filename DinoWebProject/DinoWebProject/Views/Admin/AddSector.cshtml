@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "AddSector";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <strong> SEKTÖR EKLE</strong>
+            </div>
+            <div class="card-body card-block">
+                <form asp-controller="Admin" asp-action="AddSector" method="post" enctype="multipart/form-data" class="form-horizontal">
+                    <label><strong>Sıra Numarası</strong></label>
+                    <input type="text" class="form-control" name="OrderNumber" />
+                    <br />
+
+                    <br />
+                    <label><strong>Sektör Adı</strong></label>
+                    <input type="text" class="form-control" name="Title" /><br />
+                    <label><strong>Sektör Kısa Açıklaması</strong></label>
+                    <input type="text" class="form-control" name="ShortText" /><br />
+                    <br />
+
+                    <label><strong>Sektör Görseli</strong></label><br />
+
+                    <small class="text-muted" style="color:red !important">Lütfen görselin boyutunu 400x300 piksel olarak ayarlayın.</small>
+                    <input type="file" name="Img" class="form-control" />
+                    <label><strong>Sektör Tam Açıklaması</strong></label>
+                    <input type="text" class="form-control" name="FullText" /><br />
+                    <label><strong>Sektör Detay Başlığı</strong></label>
+                    <input type="text" class="form-control" name="DetailTitle" /><br />
+                    <label><strong>Sektör Detay Görseli</strong></label><br />
+                    <small class="text-muted" style="color:red !important">Lütfen detay görselinin boyutunu 500x500 piksel olarak ayarlayın.</small>
+                    <input type="file" name="DetailImg" class="form-control" />
+
+                    <br />
+                    <label><strong>Sektör Icon</strong></label><br />
+                    <input type="file" name="Icon" class="form-control" />
+                    <br />
+                    <button class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i>SEKTÖR EKLE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
